@@ -86,7 +86,7 @@
 
         <div class="question-list">
             <div class="question-chip">
-                Where can I buy a bus card?
+                Where is the meeting point?
             </div>
 
             <div class="question-chip">
@@ -95,10 +95,6 @@
 
             <div class="question-chip">
                 What should I do in an emergency?
-            </div>
-
-            <div class="question-chip">
-                Where can I print documents?
             </div>
 
             <div class="question-chip">

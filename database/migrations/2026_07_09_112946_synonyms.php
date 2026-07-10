@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('synonyms', function (Blueprint $table) {
             $table->id();
             $table->foreignId('keyword_id')->constrained()->onDelete('cascade');
-            $table->string('word');
+            $table->json('words');
             $table->timestamps();
         });
     }
