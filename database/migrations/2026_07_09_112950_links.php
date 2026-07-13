@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('faq_id')->constrained()->onDelete('cascade');
             $table->string('title');
-            $table->string('url');
+            $table->longText('url');
             $table->timestamps();
         });
     }

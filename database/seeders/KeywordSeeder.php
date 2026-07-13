@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class KeywordSeeder extends Seeder
 {
@@ -52,10 +53,10 @@ class KeywordSeeder extends Seeder
             [
                 'faq_id' => 3,
                 'keywords' => json_encode([
-                    'private message'
+                    'private message',
                     'private messages',
                     'dm',
-                    'direct message,'
+                    'direct message',
                     'personal message',
                     'contact coordinator',
                     'message coordinator',
