@@ -251,7 +251,7 @@ class SynonymSeeder extends Seeder
             [
                 'keyword_id' => 27,
                 'words' => json_encode([
-                    'clinical',
+                    'clinician',
                     'booking',
                     'medical consultation',
                     'medical professional',

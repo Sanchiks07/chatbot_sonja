@@ -27,10 +27,6 @@ class Faq extends Model
         return $this->hasMany(Keyword::class);
     }
 
-    public function synonyms() {
-        return $this->hasMany(Synonym::class);
-    }
-
     public function links() {
         return $this->hasMany(Link::class);
     }

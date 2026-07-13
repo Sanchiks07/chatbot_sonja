@@ -4,16 +4,20 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use App\Models\Faq;
+use App\Models\Keyword;
 
 class Synonym extends Model
 {
     protected $fillable = [
         'keyword_id',
-        'word'
+        'words'
     ];
 
-    public function faq() {
-        return $this->belongsTo(Faq::class);
+    protected $casts = [
+        'words' => 'array'
+    ];
+
+    public function keyword() {
+        return $this->belongsTo(Keyword::class);
     }
 }
