@@ -29,10 +29,10 @@
                     </div>
                 </div>
 
-                <form class="chat-input" id="chatForm">
+                <form class="chat-input" id="chatForm" data-search-route="{{ route('chat.search') }}">
                     @csrf
 
-                    <input type="text" id="question" placeholder="Ask Sonja anything..." autocomplete="off">
+                    <input type="text" id="question" placeholder="Ask Sonja anything..." autocomplete="off" maxlength="500" required>
                     <button type="submit">Send</button>
                 </form>
             </div>
