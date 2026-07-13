@@ -25,8 +25,11 @@ class FaqSeeder extends Seeder
                 Monday to Friday
                 • 09:15 - 13:00
                 • 14:00 - 17:00
+
+                Contact info
+                +351 917 347 571
                 TEXT,
-                'priority' => 0,
+                'priority' => 4,
             ],
 
             [
@@ -43,7 +46,7 @@ class FaqSeeder extends Seeder
 
                 This helps keep everyone informed and avoids answering the same question multiple times.
                 TEXT,
-                'priority' => 0,
+                'priority' => 3,
             ],
 
             [
@@ -54,7 +57,7 @@ class FaqSeeder extends Seeder
 
                 Private messages should only be used when the information cannot be shared in the group chat.
                 TEXT,
-                'priority' => 0,
+                'priority' => 3,
             ],
 
             [
@@ -85,7 +88,7 @@ class FaqSeeder extends Seeder
 
                 For more detailed information, use the helpful links above.
                 TEXT,
-                'priority' => 0,
+                'priority' => 7,
             ],
 
             [
@@ -105,7 +108,7 @@ class FaqSeeder extends Seeder
 
                 If your card is lost, damaged or stops working, contact your Erasmus coordinator as soon as possible.
                 TEXT,
-                'priority' => 0,
+                'priority' => 7,
             ],
 
             // ----- ACCOMMODATION ------
@@ -122,7 +125,7 @@ class FaqSeeder extends Seeder
 
                 Door Code: 5812
                 TEXT,
-                'priority' => 0,
+                'priority' => 7,
             ],
 
             [
@@ -137,7 +140,7 @@ class FaqSeeder extends Seeder
 
                 If possible, include photos of the problem to help explain the issue and speed up the repair process.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -154,7 +157,7 @@ class FaqSeeder extends Seeder
 
                 If you cannot find the information, ask your friends or the other people who are living with you in your accommodation.
                 TEXT,
-                'priority' => 0,
+                'priority' => 8,
             ],
 
             [
@@ -171,7 +174,7 @@ class FaqSeeder extends Seeder
 
                 The trash bins are located in front of the houses.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -189,7 +192,7 @@ class FaqSeeder extends Seeder
 
                 Report broken equipment as soon as possible.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -207,7 +210,7 @@ class FaqSeeder extends Seeder
 
                 Following these rules helps create a safe, comfortable and enjoyable environment for everyone.
                 TEXT,
-                'priority' => 0,
+                'priority' => 8,
             ],
 
             [
@@ -221,7 +224,7 @@ class FaqSeeder extends Seeder
 
                 Completing the check-out process correctly helps avoid unnecessary charges or delays after your departure.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             // ----- FOOD & GROCERIES ------
@@ -240,7 +243,7 @@ class FaqSeeder extends Seeder
 
                 Most supermarkets are open every day, although opening hours may vary.
                 TEXT,
-                'priority' => 0,
+                'priority' => 8,
             ],
 
             [
@@ -251,7 +254,7 @@ class FaqSeeder extends Seeder
 
                 Google Maps is the easiest way to discover nearby places, check reviews and opening hours.
                 TEXT,
-                'priority' => 0,
+                'priority' => 5,
             ],
 
             [
@@ -268,7 +271,7 @@ class FaqSeeder extends Seeder
 
                 Keeping the kitchen clean makes living together much easier.
                 TEXT,
-                'priority' => 0,
+                'priority' => 5,
             ],
             
             [
@@ -279,7 +282,7 @@ class FaqSeeder extends Seeder
 
                 You can refill reusable water bottles directly from the tap.
                 TEXT,
-                'priority' => 0,
+                'priority' => 5,
             ],
 
             [
@@ -290,7 +293,7 @@ class FaqSeeder extends Seeder
 
                 Many places also accept contactless payments such as Apple Pay and Google Pay.
                 TEXT,
-                'priority' => 0,
+                'priority' => 5,
             ],
 
             [
@@ -301,7 +304,7 @@ class FaqSeeder extends Seeder
 
                 Restaurants often indicate dietary options on their menus, but if you have allergies or special dietary requirements, always ask the staff before ordering.
                 TEXT,
-                'priority' => 0,
+                'priority' => 5,
             ],
 
             [
@@ -315,7 +318,7 @@ class FaqSeeder extends Seeder
                 • Do not take food that belongs to other students.
                 • Clean up expired or spoiled food regularly.
                 TEXT,
-                'priority' => 0,
+                'priority' => 5,
             ],
 
             [
@@ -332,7 +335,7 @@ class FaqSeeder extends Seeder
 
                 Exploring local cuisine is a great way to experience Portuguese culture.
                 TEXT,
-                'priority' => 0,
+                'priority' => 5,
             ],
 
             [
@@ -343,7 +346,7 @@ class FaqSeeder extends Seeder
 
                 Availability depends on your location and the restaurant's opening hours.
                 TEXT,
-                'priority' => 0,
+                'priority' => 5,
             ],
 
             [
@@ -354,7 +357,7 @@ class FaqSeeder extends Seeder
 
                 On public holidays, some shops may be closed or operate with reduced hours, so it is a good idea to buy groceries in advance.
                 TEXT,
-                'priority' => 0,
+                'priority' => 5,
             ],
 
             // ----- HEALTHCARE ------
@@ -372,7 +375,7 @@ class FaqSeeder extends Seeder
 
                 For serious medical emergencies, follow the emergency procedures provided by your Erasmus coordinator.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -385,7 +388,7 @@ class FaqSeeder extends Seeder
 
                 Keep your card with you whenever you travel.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -401,7 +404,7 @@ class FaqSeeder extends Seeder
 
                 Some pharmacies also provide additional healthcare services, such as blood pressure monitoring.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -414,7 +417,7 @@ class FaqSeeder extends Seeder
 
                 Remember to bring your identification and any health insurance documents if required.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -425,7 +428,7 @@ class FaqSeeder extends Seeder
 
                 Always follow the dosage instructions and never share prescription medication with other students.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -438,7 +441,7 @@ class FaqSeeder extends Seeder
 
                 If you are unsure where to begin, your Erasmus coordinator can help direct you to the appropriate services.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -449,7 +452,7 @@ class FaqSeeder extends Seeder
 
                 If you require a specific vaccination during your stay, consult a healthcare professional or visit a medical clinic.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -462,7 +465,7 @@ class FaqSeeder extends Seeder
 
                 Private healthcare services usually have additional fees.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -473,7 +476,7 @@ class FaqSeeder extends Seeder
 
                 Routine dental care is generally not covered by the European Health Insurance Card (EHIC), so treatment may involve additional costs.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -486,7 +489,7 @@ class FaqSeeder extends Seeder
 
                 If you are unsure which medication you need, ask the pharmacist for advice.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -503,7 +506,7 @@ class FaqSeeder extends Seeder
 
                 Keeping both digital and printed copies of these documents can be during your stay.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             [
@@ -519,11 +522,10 @@ class FaqSeeder extends Seeder
 
                 If you need additional support or accessibility arrangements during your Erasmus stay, your coordinator can help direct you to the appropriate services.
                 TEXT,
-                'priority' => 0,
+                'priority' => 9,
             ],
 
             // ------ MEETING PLACES ------
-
             [
                 'category_id'=> 6,
                 'title' => 'Common Meeting Points',
@@ -538,11 +540,10 @@ class FaqSeeder extends Seeder
 
                 You can use the Google Maps link above to navigate to the meeting location.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             // ------ SIGHTSEEING ------
-
             [
                 'category_id'=> 7,
                 'title' => 'Must-Visit Places in Lisbon',
@@ -561,7 +562,7 @@ class FaqSeeder extends Seeder
 
                 Many of these locations can easily be reached using public transport.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -579,7 +580,7 @@ class FaqSeeder extends Seeder
 
                 It is a great place to experience everyday Portuguese life.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -597,7 +598,7 @@ class FaqSeeder extends Seeder
 
                 Student discounts are available at many museums, so remember to carry your student card.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -613,7 +614,7 @@ class FaqSeeder extends Seeder
 
                 During the summer months, beaches can become very busy, especially on weekends.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -628,7 +629,7 @@ class FaqSeeder extends Seeder
                 • Picnics.
                 • Studying outside.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -647,7 +648,7 @@ class FaqSeeder extends Seeder
 
                 Most destinations are accessible by train or bus.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -658,7 +659,7 @@ class FaqSeeder extends Seeder
 
                 Always carry your student card or Erasmus identification, as you may be asked to present it when purchasing tickets.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -674,7 +675,7 @@ class FaqSeeder extends Seeder
 
                 Check local event calendars to discover what's happening during your stay.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -691,7 +692,7 @@ class FaqSeeder extends Seeder
 
                 These are excellent places to watch the sunset and enjoy panoramic views of the city.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -709,7 +710,7 @@ class FaqSeeder extends Seeder
 
                 These sites offer a glimpse into Portugal's history and architectural heritage.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -727,7 +728,7 @@ class FaqSeeder extends Seeder
 
                 It is suitable for visitors of all ages and can easily be reached by public transport.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -746,7 +747,7 @@ class FaqSeeder extends Seeder
 
                 Many souvenir shops can be found in Lisbon city centre, especially around Baixa, Chiado and Belém.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -764,7 +765,7 @@ class FaqSeeder extends Seeder
 
                 Several companies offer sightseeing cruises, sunset cruises and guided boat tours throughout the year.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             [
@@ -781,7 +782,7 @@ class FaqSeeder extends Seeder
 
                 Arrive a little before sunset to find a good spot and enjoy panoramic views over the city and the Tagus River. These viewpoints are especially popular during spring and summer.
                 TEXT,
-                'priority' => 0,
+                'priority' => 6,
             ],
 
             // ----- EMERGENCY ------
@@ -798,7 +799,7 @@ class FaqSeeder extends Seeder
 
                 The service is available 24 hours a day and operators can usually assist in English.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ],
 
             [
@@ -816,7 +817,7 @@ class FaqSeeder extends Seeder
 
                 Missing the bus, getting lost or forgetting your keys are not emergencies.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ],
 
             [
@@ -833,7 +834,7 @@ class FaqSeeder extends Seeder
 
                 For personal matters, avoid contacting coordinators privately unless it is genuinely necessary.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ],
 
             [
@@ -852,7 +853,7 @@ class FaqSeeder extends Seeder
 
                 Outside office hours, contact your coordinator only if the situation is urgent.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ],
 
             [
@@ -863,7 +864,7 @@ class FaqSeeder extends Seeder
 
                 If your passport or national ID has been lost or stolen, you should also contact your country's embassy or consulate as soon as possible.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ],
 
             [
@@ -877,7 +878,7 @@ class FaqSeeder extends Seeder
 
                 Keep digital copies of important documents whenever possible.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ],
 
             [
@@ -888,7 +889,7 @@ class FaqSeeder extends Seeder
 
                 Do not attempt to force entry or damage the property.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ],
 
             [
@@ -903,7 +904,7 @@ class FaqSeeder extends Seeder
 
                 If anyone is in immediate danger, call 112.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ],
 
             [
@@ -917,7 +918,7 @@ class FaqSeeder extends Seeder
 
                 For non-urgent medical concerns, visit a health centre, clinic or pharmacy instead.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ],
 
             [
@@ -932,7 +933,7 @@ class FaqSeeder extends Seeder
 
                 Only return to the building once emergency services confirm it is safe.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ],
 
             [
@@ -946,7 +947,7 @@ class FaqSeeder extends Seeder
                 • Follow evacuation or safety instructions if required.
                 • Contact your Erasmus coordinator if the situation affects your accommodation or travel.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ],
 
             [
@@ -962,7 +963,7 @@ class FaqSeeder extends Seeder
 
                 To make the process easier, keep digital copies of your passport or ID card stored securely before travelling.
                 TEXT,
-                'priority' => 0,
+                'priority' => 10,
             ]
         ]);
     }

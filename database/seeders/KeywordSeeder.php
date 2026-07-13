@@ -18,16 +18,16 @@ class KeywordSeeder extends Seeder
                 'faq_id' => 1,
                 'keywords' => json_encode([
                     'office',
-                    '',
-                    '',
+                    'epd office',
+                    'office address',
                     'address',
                     'location',
                     'where is the office',
-                    '',
-                    '',
+                    'office location',
+                    'office hours',
                     'opening hours',
                     'working hours',
-                    '',
+                    'visit office',
                     'office open'
                 ])
             ],
@@ -182,7 +182,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 2,
+                'faq_id' => 10,
                 'keywords' => json_encode([
                     'cleaning',
                     'clean',
@@ -199,7 +199,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 3,
+                'faq_id' => 11,
                 'keywords' => json_encode([
                     'washing machine',
                     'washer',
@@ -215,7 +215,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 4,
+                'faq_id' => 12,
                 'keywords' => json_encode([
                     'rules',
                     'house rules',
@@ -232,7 +232,7 @@ class KeywordSeeder extends Seeder
             ],
         
             [
-                'faq_id' => 5,
+                'faq_id' => 13,
                 'keywords' => json_encode([
                     'check out',
                     'check-out',
@@ -248,7 +248,7 @@ class KeywordSeeder extends Seeder
 
             // ------ FOOD & GROCERIES ------
             [
-                'faq_id' => 6,
+                'faq_id' => 14,
                 'keywords' => json_encode([
                     'supermarket',
                     'grocery store',
@@ -268,7 +268,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 7,
+                'faq_id' => 15,
                 'keywords' => json_encode([
                     'restaurant',
                     'restaurants',
@@ -286,7 +286,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 8,
+                'faq_id' => 16,
                 'keywords' => json_encode([
                     'cook',
                     'cooking',
@@ -301,7 +301,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 9,
+                'faq_id' => 17,
                 'keywords' => json_encode([
                     'water',
                     'tap water',
@@ -313,7 +313,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 2,
+                'faq_id' => 18,
                 'keywords' => json_encode([
                     'cash',
                     'card',
@@ -328,7 +328,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 3,
+                'faq_id' => 19,
                 'keywords' => json_encode([
                     'vegetarian',
                     'vegan',
@@ -342,7 +342,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 4,
+                'faq_id' => 20,
                 'keywords' => json_encode([
                     'fridge',
                     'refrigerator',
@@ -355,7 +355,7 @@ class KeywordSeeder extends Seeder
             ],
         
             [
-                'faq_id' => 5,
+                'faq_id' => 21,
                 'keywords' => json_encode([
                     'portuguese food',
                     'traditional food',
@@ -367,7 +367,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 6,
+                'faq_id' => 22,
                 'keywords' => json_encode([
                     'food delivery',
                     'delivery',
@@ -380,7 +380,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 7,
+                'faq_id' => 23,
                 'keywords' => json_encode([
                     'sunday',
                     'holiday',
@@ -393,7 +393,7 @@ class KeywordSeeder extends Seeder
 
             // ------ HEALTHCARE ------
             [
-                'faq_id' => 8,
+                'faq_id' => 24,
                 'keywords' => json_encode([
                     'healthcare',
                     'health care',
@@ -408,7 +408,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 9,
+                'faq_id' => 25,
                 'keywords' => json_encode([
                     'ehic',
                     'european health insurance card',
@@ -420,7 +420,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 2,
+                'faq_id' => 26,
                 'keywords' => json_encode([
                     'pharmacy',
                     'pharmacies',
@@ -433,7 +433,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 3,
+                'faq_id' => 27,
                 'keywords' => json_encode([
                     'doctor',
                     'gp',
@@ -446,7 +446,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 4,
+                'faq_id' => 28,
                 'keywords' => json_encode([
                     'prescription',
                     'medicine',
@@ -458,7 +458,7 @@ class KeywordSeeder extends Seeder
             ],
         
             [
-                'faq_id' => 5,
+                'faq_id' => 29,
                 'keywords' => json_encode([
                     'mental heealth',
                     'stress',
@@ -471,7 +471,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 6,
+                'faq_id' => 30,
                 'keywords' => json_encode([
                     'vaccination',
                     'vaccine',
@@ -482,7 +482,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 7,
+                'faq_id' => 31,
                 'keywords' => json_encode([
                     'medical costs',
                     'healthcare costs',
@@ -494,7 +494,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 8,
+                'faq_id' => 32,
                 'keywords' => json_encode([
                     'dentist',
                     'dental',
@@ -506,7 +506,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 9,
+                'faq_id' => 33,
                 'keywords' => json_encode([
                     'buy medicine',
                     'medicine',
@@ -519,7 +519,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 10,
+                'faq_id' => 34,
                 'keywords' => json_encode([
                     'health insurance',
                     'insurance documents',
@@ -535,7 +535,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 11,
+                'faq_id' => 35,
                 'keywords' => json_encode([
                     'accessibility',
                     'disability',
@@ -552,7 +552,7 @@ class KeywordSeeder extends Seeder
 
             // ------ MEETING PLACES ------
             [
-                'faq_id' => 12,
+                'faq_id' => 36,
                 'keywords' => json_encode([
                     'meeting',
                     'meeting point',
@@ -576,7 +576,7 @@ class KeywordSeeder extends Seeder
         
             // ------ SIGHTSEEING -------
             [
-                'faq_id' => 14,
+                'faq_id' => 37,
                 'keywords' => json_encode([
                     'lisbon',
                     'visit lisbon',
@@ -591,7 +591,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 15,
+                'faq_id' => 38,
                 'keywords' => json_encode([
                     'montijo',
                     'things to do in montijo',
@@ -603,7 +603,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 16,
+                'faq_id' => 39,
                 'keywords' => json_encode([
                     'museum',
                     'museums',
@@ -615,7 +615,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 17,
+                'faq_id' => 40,
                 'keywords' => json_encode([
                     'beach',
                     'beaches',
@@ -627,7 +627,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 18,
+                'faq_id' => 41,
                 'keywords' => json_encode([
                     'park',
                     'nature',
@@ -640,7 +640,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 19,
+                'faq_id' => 42,
                 'keywords' => json_encode([
                     'day trip',
                     'one day trip',
@@ -652,7 +652,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 20,
+                'faq_id' => 43,
                 'keywords' => json_encode([
                     'student dicount',
                     'discount',
@@ -663,7 +663,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 21,
+                'faq_id' => 44,
                 'keywords' => json_encode([
                     'events',
                     'festival',
@@ -676,7 +676,7 @@ class KeywordSeeder extends Seeder
             ],
         
             [
-                'faq_id' => 22,
+                'faq_id' => 45,
                 'keywords' => json_encode([
                     'photo',
                     'photography',
@@ -688,7 +688,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 23,
+                'faq_id' => 46,
                 'keywords' => json_encode([
                     'church',
                     'cathredal',
@@ -702,7 +702,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 24,
+                'faq_id' => 47,
                 'keywords' => json_encode([
                     'oceanaruim',
                     'aquaruim',
@@ -714,7 +714,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 25,
+                'faq_id' => 48,
                 'keywords' => json_encode([
                     'souvenir',
                     'souvenirs',
@@ -730,7 +730,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 25,
+                'faq_id' => 49,
                 'keywords' => json_encode([
                     'boat tour',
                     'boat trip',
@@ -745,7 +745,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 26,
+                'faq_id' => 50,
                 'keywords' => json_encode([
                     'sunset',
                     'sunset spot',
@@ -760,7 +760,7 @@ class KeywordSeeder extends Seeder
 
             // ------- EMERGENCY ------
             [
-                'faq_id' => 27,
+                'faq_id' => 51,
                 'keywords' => json_encode([
                     'emergency',
                     'emergency number',
@@ -776,7 +776,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 28,
+                'faq_id' => 52,
                 'keywords' => json_encode([
                     'when to call 112',
                     'call ambulance',
@@ -790,7 +790,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 29,
+                'faq_id' => 53,
                 'keywords' => json_encode([
                     'coordinator',
                     'erasmus coordinator',
@@ -803,7 +803,19 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 30,
+                'faq_id' => 54,
+                'keywords' => json_encode([
+                    'office',
+                    'EPD office',
+                    'office adress',
+                    'office hours',
+                    'visit office',
+                    'office location'
+                ])
+            ],
+
+            [
+                'faq_id' => 55,
                 'keywords' => json_encode([
                     'tourist police',
                     'tourist assitance',
@@ -818,7 +830,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 30,
+                'faq_id' => 56,
                 'keywords' => json_encode([
                     'passport',
                     'lost passport',
@@ -832,7 +844,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 30,
+                'faq_id' => 57,
                 'keywords' => json_encode([
                     'lost keys',
                     'keys',
@@ -845,7 +857,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 30,
+                'faq_id' => 58,
                 'keywords' => json_encode([
                     'crime',
                     'theft',
@@ -858,7 +870,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 30,
+                'faq_id' => 59,
                 'keywords' => json_encode([
                     'medical emergency',
                     'ambulance',
@@ -870,7 +882,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 30,
+                'faq_id' => 60,
                 'keywords' => json_encode([
                     'fire',
                     'smoke',
@@ -882,7 +894,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 30,
+                'faq_id' => 61,
                 'keywords' => json_encode([
                     'eathcuake',
                     'storm',
@@ -894,7 +906,7 @@ class KeywordSeeder extends Seeder
             ],
 
             [
-                'faq_id' => 30,
+                'faq_id' => 62,
                 'keywords' => json_encode([
                     'passport',
                     'lost passport',
