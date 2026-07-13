@@ -9,7 +9,6 @@
                         <img src="{{ asset('img/Sonja-logo.png') }}" alt="Sonja chat mascot" class="chat-avatar">
 
                         <div>
-                            <h2>Sonja</h2>
                             <p>European Projects Development • Erasmus+ Portugal</p>
                         </div>
                     </div>

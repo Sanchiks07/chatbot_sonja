@@ -84,25 +84,65 @@
             Here are some questions students frequently ask:
         </p>
 
-        <div class="question-list">
-            <div class="question-chip">
-                Where is the meeting point?
+        <div class="question-marquee" aria-label="Frequently asked student questions">
+            <div class="question-row question-row--ltr">
+                <div class="question-track">
+                    <div class="question-set">
+                        <div class="question-chip">Where is the meeting point?</div>
+                        <div class="question-chip">How do I contact the EPD office?</div>
+                        <div class="question-chip">How do I get a transport card?</div>
+                        <div class="question-chip">Where can I buy cheap groceries?</div>
+                        <div class="question-chip">What is the nearest pharmacy?</div>
+                        <div class="question-chip">How do I find student discounts?</div>
+                        <div class="question-chip">Where is the closest laundry?</div>
+                        <div class="question-chip">How can I register at my university?</div>
+                        <div class="question-chip">How do I top up my phone plan?</div>
+                        <div class="question-chip">Where can I print documents?</div>
+                    </div>
+
+                    <div class="question-set" aria-hidden="true">
+                        <div class="question-chip">Where is the meeting point?</div>
+                        <div class="question-chip">How do I contact the EPD office?</div>
+                        <div class="question-chip">How do I get a transport card?</div>
+                        <div class="question-chip">Where can I buy cheap groceries?</div>
+                        <div class="question-chip">What is the nearest pharmacy?</div>
+                        <div class="question-chip">How do I find student discounts?</div>
+                        <div class="question-chip">Where is the closest laundry?</div>
+                        <div class="question-chip">How can I register at my university?</div>
+                        <div class="question-chip">How do I top up my phone plan?</div>
+                        <div class="question-chip">Where can I print documents?</div>
+                    </div>
+                </div>
             </div>
 
-            <div class="question-chip">
-                Where is the nearest supermarket?
-            </div>
+            <div class="question-row question-row--rtl">
+                <div class="question-track">
+                    <div class="question-set">
+                        <div class="question-chip">What should I do in an emergency?</div>
+                        <div class="question-chip">Which restaurants are affordable?</div>
+                        <div class="question-chip">How do I open a bank account?</div>
+                        <div class="question-chip">Where is the nearest hospital?</div>
+                        <div class="question-chip">How can I join local events?</div>
+                        <div class="question-chip">What apps should I install in Portugal?</div>
+                        <div class="question-chip">How do I reach Lisbon from Montijo?</div>
+                        <div class="question-chip">Where can I study quietly?</div>
+                        <div class="question-chip">How do I get to the airport?</div>
+                        <div class="question-chip">What are emergency phone numbers?</div>
+                    </div>
 
-            <div class="question-chip">
-                What should I do in an emergency?
-            </div>
-
-            <div class="question-chip">
-                Which restaurants are affordable?
-            </div>
-
-            <div class="question-chip">
-                How do I contact the EPD office?
+                    <div class="question-set" aria-hidden="true">
+                        <div class="question-chip">What should I do in an emergency?</div>
+                        <div class="question-chip">Which restaurants are affordable?</div>
+                        <div class="question-chip">How do I open a bank account?</div>
+                        <div class="question-chip">Where is the nearest hospital?</div>
+                        <div class="question-chip">How can I join local events?</div>
+                        <div class="question-chip">What apps should I install in Portugal?</div>
+                        <div class="question-chip">How do I reach Lisbon from Montijo?</div>
+                        <div class="question-chip">Where can I study quietly?</div>
+                        <div class="question-chip">How do I get to the airport?</div>
+                        <div class="question-chip">What are emergency phone numbers?</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
