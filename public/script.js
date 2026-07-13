@@ -2,6 +2,11 @@ const form = document.getElementById("chatForm");
 const input = document.getElementById("question");
 const messages = document.getElementById("chatMessages");
 
+const searchRoute = form?.dataset.searchRoute;
+const csrfToken = document
+    .querySelector('meta[name="csrf-token"]')
+    ?.getAttribute("content");
+
 let typingBubble = null;
 
 form.addEventListener("submit", async function (e) {
@@ -10,16 +15,20 @@ form.addEventListener("submit", async function (e) {
 
     const question = input.value.trim();
 
-    if (question === "")
+    if (question === "") {
         return;
+    }
 
-    // Show student's message
+    // Show student's message immediately
     addMessage(question, "user");
 
     // Clear input
     input.value = "";
 
     scrollToBottom();
+
+    // Show Sonja typing immediately
+    showTyping();
 
     try {
 
@@ -28,6 +37,7 @@ form.addEventListener("submit", async function (e) {
             method: "POST",
 
             headers: {
+                "Accept": "application/json",
                 "Content-Type": "application/json",
                 "X-CSRF-TOKEN": csrfToken
             },
@@ -38,20 +48,34 @@ form.addEventListener("submit", async function (e) {
 
         });
 
-        // Show typing indicator while waiting
-        showTyping();
+        if (!response.ok) {
+
+            removeTyping();
+
+            const errorData = await response.json().catch(() => ({}));
+
+            addMessage(
+                errorData.message ||
+                "Sorry, something went wrong. Please try again later.",
+                "bot"
+            );
+
+            scrollToBottom();
+
+            return;
+        }
 
         const data = await response.json();
 
-        // Keep typing indicator visible for a short time
+        // Make Sonja feel more natural
         await new Promise(resolve => setTimeout(resolve, 800));
 
         removeTyping();
 
-        // Show Sonja's answer
         addMessage(data.answer, "bot", data.links);
 
-    } catch (error) {
+    }
+    catch (error) {
 
         console.error(error);
 
@@ -71,37 +95,52 @@ form.addEventListener("submit", async function (e) {
 function addMessage(text, sender, links = [])
 {
     const message = document.createElement("div");
-
-    message.className = "message " + sender;
+    message.className = `message ${sender}`;
 
     const bubble = document.createElement("div");
-
     bubble.className = "bubble";
 
-    bubble.innerHTML = text.replace(/\n/g, "<br>");
+    const parts = String(text ?? "").split("\n");
 
-    if (links && links.length > 0)
-    {
+    parts.forEach((part, index) => {
+
+        if (index > 0) {
+            bubble.appendChild(document.createElement("br"));
+        }
+
+        bubble.appendChild(document.createTextNode(part));
+
+    });
+
+    if (links && links.length > 0) {
+
         const linksContainer = document.createElement("div");
-
         linksContainer.className = "chat-links";
 
         links.forEach(link => {
+
+            if (!isSafeUrl(link.url)) {
+                return;
+            }
 
             const a = document.createElement("a");
 
             a.href = link.url;
             a.target = "_blank";
             a.rel = "noopener noreferrer";
-
-            a.innerHTML = "🔗 " + link.title;
+            a.textContent = "🔗 " + link.title;
 
             linksContainer.appendChild(a);
 
         });
 
-        bubble.appendChild(document.createElement("br"));
-        bubble.appendChild(linksContainer);
+        if (linksContainer.childNodes.length > 0) {
+
+            bubble.appendChild(document.createElement("br"));
+            bubble.appendChild(linksContainer);
+
+        }
+
     }
 
     message.appendChild(bubble);
@@ -111,6 +150,10 @@ function addMessage(text, sender, links = [])
 
 function showTyping()
 {
+    if (typingBubble) {
+        return;
+    }
+
     typingBubble = document.createElement("div");
 
     typingBubble.className = "message bot typing-message";
@@ -130,10 +173,28 @@ function showTyping()
 
 function removeTyping()
 {
-    if (typingBubble)
-    {
+    if (typingBubble) {
+
         typingBubble.remove();
+
         typingBubble = null;
+
+    }
+}
+
+function isSafeUrl(url)
+{
+    try {
+
+        const parsed = new URL(url, window.location.origin);
+
+        return ["http:", "https:"].includes(parsed.protocol);
+
+    }
+    catch {
+
+        return false;
+
     }
 }
 
