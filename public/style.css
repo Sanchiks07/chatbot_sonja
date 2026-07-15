@@ -151,7 +151,7 @@ section {
 
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
 }
 
@@ -163,12 +163,171 @@ section {
     border: 1px solid var(--color-border);
     box-shadow: var(--shadow-card);
     transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(13, 56, 80, 0.12);
     border-color: rgba(16, 71, 100, 0.35);
+}
+
+.card-animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-animation {
+    opacity: 1;
+}
+
+/* Accommodation and shopping - icon rising from bottom */
+.card-accommodation .card-animation,
+.card-shopping .card-animation,
+.card-food .card-animation,
+.card-healthcare .card-animation,
+.card-activities .card-animation {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(40%);
+    width: 120px;
+    height: 120px;
+    opacity: 1;
+    z-index: 0;
+}
+
+.card-accommodation .animation-icon,
+.card-shopping .animation-icon,
+.card-food .animation-icon,
+.card-healthcare .animation-icon,
+.card-activities .animation-icon {
+    display: block;
+    transform: translateY(150px);
+    opacity: 0;
+}
+
+.card-accommodation .animation-icon {
+    color: #2563eb;
+}
+
+.card-transport .animation-icon-transport {
+    color: #22c55e;
+}
+
+.card-shopping .animation-icon {
+    color: #facc15;
+}
+
+.card-food .animation-icon {
+    color: #f97316;
+}
+
+.card-healthcare .animation-icon {
+    color: #ef4444;
+}
+
+.card-activities .animation-icon {
+    color: #a855f7;
+}
+
+.card-accommodation:hover .animation-icon {
+    animation: rise-up 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.card-shopping:hover .animation-icon {
+    animation: rise-up-shopping 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.card-food:hover .animation-icon,
+.card-healthcare:hover .animation-icon,
+.card-activities:hover .animation-icon {
+    animation: rise-up-lower 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes rise-up {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    65% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(97px);
+        opacity: 0.3;
+    }
+}
+
+@keyframes rise-up-lower {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    65% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(124px);
+        opacity: 0.3;
+    }
+}
+
+@keyframes rise-up-shopping {
+    0% {
+        transform: translateY(150px);
+        opacity: 0;
+    }
+    65% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(100px);
+        opacity: 0.3;
+    }
+}
+
+/* Transport - Bus drives in from left and stops before right edge */
+.card-transport .card-animation {
+    position: absolute;
+    inset: 0;
+    opacity: 1;
+    z-index: 0;
+}
+
+.card-transport .animation-icon-transport {
+    position: absolute;
+    left: -110px;
+    bottom: -16px;
+    width: 96px;
+    height: 96px;
+    opacity: 0;
+    z-index: 0;
+}
+
+.card-transport:hover .animation-icon-transport {
+    animation: drive-in-stop 1s ease-out forwards;
+}
+
+@keyframes drive-in-stop {
+    0% {
+        left: -110px;
+        opacity: 0;
+    }
+    35% {
+        opacity: 0.2;
+    }
+    100% {
+        left: calc(100% - 110px);
+        opacity: 0.2;
+    }
 }
 
 .icon {
@@ -315,7 +474,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 82px 20px 20px;
+    padding: 20px 20px 20px;
     margin: 0 auto;
 }
 
@@ -323,7 +482,6 @@ section {
     position: relative;
     width: 100%;
     max-width: 920px;
-    padding-top: 56px;
 }
 
 .chat-container {
@@ -342,7 +500,7 @@ section {
     position: absolute;
     top: 24px;
     left: 85%;
-    transform: translate(-50%, -74%);
+    transform: translate(-120%, -45%);
     width: min(180px, 38vw);
     height: auto;
     z-index: 2;
@@ -376,11 +534,6 @@ section {
     border: none;
     background: transparent;
     box-shadow: none;
-}
-
-.chat-header h2 {
-    margin-bottom: 4px;
-    color: var(--color-brand-900);
 }
 
 .chat-header p {
@@ -608,15 +761,6 @@ section {
         padding: 12px;
     }
 
-    .sleeping-cat {
-        right: 14px;
-        bottom: 14px;
-        transform: rotate(-2deg);
-    }
-
-    .sleeping-cat__body {
-        padding: 8px 12px;
-    }
 }
 
 .hero-content,
