@@ -1014,7 +1014,9 @@ class SynonymSeeder extends Seeder
                     'castle',
                     'lxfactory',
                     'timeout market',
-                    'heritage'
+                    'heritage',
+                    'lisbon',
+                    'lisboa'
                 ])
             ],
 
