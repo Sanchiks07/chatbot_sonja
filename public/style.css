@@ -1,3 +1,4 @@
+/* ------ BASIC/DEFAULT CSS ------ */
 :root {
     --color-brand-900: #0a3349;
     --color-brand-800: #104764;
@@ -39,6 +40,7 @@ body {
     min-height: 100vh;
 }
 
+/* ------ HOME PAGE ------ */
 section {
     width: min(100%, var(--max-content));
     margin: 0 auto;
@@ -112,8 +114,7 @@ section {
     margin-bottom: 2.1rem;
 }
 
-.primary-btn,
-.secondary-btn {
+.primary-btn, .secondary-btn {
     display: inline-block;
     text-decoration: none;
     background: var(--color-brand-800);
@@ -127,21 +128,16 @@ section {
     box-shadow: var(--shadow-soft);
 }
 
-.primary-btn:hover,
-.secondary-btn:hover {
+.primary-btn:hover, .secondary-btn:hover {
     background: var(--color-brand-700);
     transform: translateY(-2px);
 }
 
-.features,
-.questions,
-.about {
+.features, .questions, .about {
     padding: 78px 24px;
 }
 
-.features h2,
-.questions h2,
-.about-box h2 {
+.features h2, .questions h2, .about-box h2 {
     text-align: center;
     font-family: "Montserrat", "Avenir Next", sans-serif;
     font-size: clamp(1.65rem, 3vw, 2.35rem);

@@ -171,34 +171,22 @@ function showTyping()
     scrollToBottom();
 }
 
-function removeTyping()
-{
+function removeTyping() {
     if (typingBubble) {
-
         typingBubble.remove();
-
         typingBubble = null;
-
     }
 }
 
-function isSafeUrl(url)
-{
+function isSafeUrl(url) {
     try {
-
         const parsed = new URL(url, window.location.origin);
-
         return ["http:", "https:"].includes(parsed.protocol);
-
-    }
-    catch {
-
+    } catch {
         return false;
-
     }
 }
 
-function scrollToBottom()
-{
+function scrollToBottom() {
     messages.scrollTop = messages.scrollHeight;
 }

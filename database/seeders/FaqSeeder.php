@@ -526,6 +526,25 @@ class FaqSeeder extends Seeder
                 'priority' => 9,
             ],
 
+            [
+                'category_id' => 5,
+                'title' => 'Feeling Sick During Your Internship',
+                'answer' => <<<TEXT
+                If you become ill during your internship, you should not go to work if your condition prevents you from working safely.
+
+                As soon as possible:
+                • Visit a doctor or a healthcare centre for a medical examination.
+                • If necessary, ask the doctor for a medical certificate (sick leave).
+                • Inform your workplace supervisor immediately that you are unwell and unable to attend work.
+                • Send your medical certificate to your supervisor if they request it.
+
+                If your illness lasts for several days or affects your internship, you should also inform your Erasmus coordinator so they are aware of your situation and can provide support if needed.
+
+                Always communicate with your supervisor as early as possible. Keeping your workplace informed helps avoid misunderstandings and ensures your absence is properly documented.
+                TEXT,
+                'priority' => 9,
+            ],
+
             // ------ MEETING PLACES ------
             [
                 'category_id'=> 6,
@@ -539,7 +558,7 @@ class FaqSeeder extends Seeder
 
                 The exact meeting time is always shared in the official WhatsApp group or your designated communication platform. Please check the latest announcements carefully, as meeting times may change.
 
-                You can use the Google Maps link above to navigate to the meeting location.
+                You can use the Google Maps link below to navigate to the meeting location.
                 TEXT,
                 'priority' => 6,
             ],

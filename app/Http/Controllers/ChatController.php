@@ -13,11 +13,8 @@ class ChatController extends Controller
         return view('chat');
     }
 
-    public function search(Request $request): JsonResponse
-    {
-        $validator = Validator::make($request->all(), [
-            'question' => ['bail', 'required', 'string', 'min:2', 'max:500'],
-        ]);
+    public function search(Request $request): JsonResponse {
+        $validator = Validator::make($request->all(), ['question' => ['bail', 'required', 'string', 'min:2', 'max:500'],]);
 
         if ($validator->fails()) {
             return response()->json([
