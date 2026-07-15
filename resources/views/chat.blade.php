@@ -21,10 +21,8 @@
                             <br><br>
 
                             I'm Sonja, your Erasmus assistant.
-
-                            Ask me anything about accommodation, transport,
-                            healthcare, supermarkets, restaurants or anything
-                            related to your Erasmus experience.
+                            Ask me anything about accommodation, transport, healthcare, supermarkets, restaurants 
+                            or anything related to your Erasmus experience.
                         </div>
                     </div>
                 </div>

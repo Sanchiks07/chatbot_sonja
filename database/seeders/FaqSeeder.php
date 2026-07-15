@@ -87,7 +87,7 @@ class FaqSeeder extends Seeder
                 • Use Google Maps to plan routes and check live departure times.
                 • Uber and Bolt are widely available if you prefer private transport.
 
-                For more detailed information, use the helpful links above.
+                For more detailed information, use the helpful links below.
                 TEXT,
                 'priority' => 7,
             ],

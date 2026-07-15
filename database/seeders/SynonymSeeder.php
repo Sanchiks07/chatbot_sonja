@@ -167,8 +167,7 @@ class SynonymSeeder extends Seeder
                     'defective',
                     'usable',
                     'contactless',
-                    'metropolitan',
-                    'lisboa'
+                    'metropolitan'
                 ])
             ],
 
@@ -1007,7 +1006,6 @@ class SynonymSeeder extends Seeder
                     'explore',
                     'exploration',
                     'visit',
-                    'lisbon',
                     'belém',
                     'jerónimos',
                     'rossio',

@@ -3,9 +3,9 @@
         <div class="hero-content">
             <div class="hero-brand">
                 <img src="{{ asset('img/epd-logo-2.png') }}" alt="European Projects Development logo" class="brand-logo">
+                <p class="eyebrow">European Projects Development</p>
             </div>
 
-            <p class="eyebrow">European Projects Development</p>
             <h1>Welcome to Sonja</h1>
             <p class="subtitle">
                 Your Erasmus+ assistant for life in Portugal.

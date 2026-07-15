@@ -52,7 +52,7 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 78px 24px 46px;
+    padding: 46px 24px;
     position: relative;
 }
 
@@ -72,12 +72,18 @@ section {
 
 .hero-brand {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.hero-brand img {
     margin-bottom: 1.1rem;
 }
 
 .brand-logo {
-    width: min(320px, 62vw);
+    width: min(250px, 40vw);
     height: auto;
     display: block;
     filter: drop-shadow(0 10px 24px rgba(10, 51, 73, 0.12));
@@ -134,7 +140,7 @@ section {
 }
 
 .features, .questions, .about {
-    padding: 78px 24px;
+    padding: 56px 24px;
 }
 
 .features h2, .questions h2, .about-box h2 {
@@ -706,9 +712,7 @@ section {
         padding-top: 64px;
     }
 
-    .features,
-    .questions,
-    .about {
+    .features, .questions, .about {
         padding: 54px 18px;
     }
 
@@ -759,10 +763,7 @@ section {
 
 }
 
-.hero-content,
-.about-box,
-.chat-container,
-.card {
+.hero-content, .about-box, .chat-container, .card {
     animation: rise-in 420ms ease-out both;
 }
 
