@@ -167,12 +167,13 @@ section {
     transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
     position: relative;
     overflow: hidden;
+    --card-accent: var(--color-brand-700);
 }
 
 .card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 24px rgba(13, 56, 80, 0.12);
-    border-color: rgba(16, 71, 100, 0.35);
+    border-color: var(--card-accent);
 }
 
 .card-animation {
@@ -217,27 +218,51 @@ section {
 }
 
 .card-accommodation .animation-icon {
-    color: #2563eb;
+    color: var(--card-accent);
+}
+
+.card-accommodation {
+    --card-accent: #2563eb;
 }
 
 .card-transport .animation-icon-transport {
-    color: #22c55e;
+    color: var(--card-accent);
+}
+
+.card-transport {
+    --card-accent: #22c55e;
 }
 
 .card-shopping .animation-icon {
-    color: #facc15;
+    color: var(--card-accent);
+}
+
+.card-shopping {
+    --card-accent: #facc15;
 }
 
 .card-food .animation-icon {
-    color: #f97316;
+    color: var(--card-accent);
+}
+
+.card-food {
+    --card-accent: #f97316;
 }
 
 .card-healthcare .animation-icon {
-    color: #ef4444;
+    color: var(--card-accent);
+}
+
+.card-healthcare {
+    --card-accent: #ef4444;
 }
 
 .card-activities .animation-icon {
-    color: #a855f7;
+    color: var(--card-accent);
+}
+
+.card-activities {
+    --card-accent: #a855f7;
 }
 
 .card-accommodation:hover .animation-icon {
@@ -339,12 +364,15 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.82rem;
-    font-weight: 800;
-    letter-spacing: 0.03em;
-    background: var(--color-brand-050);
-    color: var(--color-brand-800);
-    border: 1px solid rgba(22, 97, 137, 0.2);
+    background: #f8fafc;
+    color: #9ca3af;
+    border: 1px solid #dbe3ea;
+}
+
+.icon svg {
+    width: 22px;
+    height: 22px;
+    display: block;
 }
 
 .card h3 {

@@ -984,6 +984,160 @@ class FaqSeeder extends Seeder
                 To make the process easier, keep digital copies of your passport or ID card stored securely before travelling.
                 TEXT,
                 'priority' => 10,
+            ],
+
+            // ------ SHOPPING ------
+            [
+                'category_id'=> 9,
+                'title' => 'Clothes',
+                'answer' => <<<TEXT
+                If you need clothes during your Erasmus stay, you can find affordable and premium options in Montijo and Lisbon.
+
+                Useful options include:
+                • Fast-fashion stores for basics and seasonal clothes.
+                • Sportswear stores.
+                • Second-hand and outlet options.
+
+                Bring a light jacket for windy days and a warmer layer for winter evenings.
+                TEXT,
+                'priority' => 6,
+            ],
+
+            [
+                'category_id'=> 9,
+                'title' => 'Buying Clothes',
+                'answer' => <<<TEXT
+                Before buying clothes, compare prices and check for student discounts.
+
+                Tips:
+                • Look for end-of-season sales (saldo/saldos).
+                • Keep receipts in case you need exchanges or returns.
+                • Check store return policies before purchasing.
+                • For cheaper options, explore outlets or second-hand shops.
+
+                If you are unsure where to start, ask in the group chat for local recommendations.
+                TEXT,
+                'priority' => 6,
+            ],
+
+            [
+                'category_id'=> 9,
+                'title' => 'Shopping Centre',
+                'answer' => <<<TEXT
+                You can find shopping centres with clothing stores, supermarkets and food courts in and around Lisbon.
+
+                Shopping centres are useful for:
+                • Buying clothes and essentials in one place.
+                • Indoor shopping during bad weather.
+                • Access to public transport and longer opening hours.
+
+                Popular options include Colombo, Vasco da Gama and Alegro Montijo.
+                TEXT,
+                'priority' => 6,
+            ],
+
+            [
+                'category_id'=> 9,
+                'title' => 'Money and Withdrawing Cash',
+                'answer' => <<<TEXT
+                You can withdraw cash safely from ATMs (Multibanco) available in shopping centres, supermarkets and bank branches.
+
+                Useful tips:
+                • Prefer ATMs attached to banks or busy public places.
+                • Choose to be charged in EUR to avoid poor conversion rates.
+                • Keep your card covered while entering your PIN.
+                • If an ATM keeps your card, contact your bank immediately.
+
+                Most places in Portugal accept card payments, but carrying a small amount of cash is useful for small shops and emergencies.
+                TEXT,
+                'priority' => 7,
+            ],
+
+            [
+                'category_id'=> 2,
+                'title' => 'Taxi and Ride Apps',
+                'answer' => <<<TEXT
+                You can use taxis and ride-hailing apps like Uber and Bolt in Montijo and Lisbon.
+
+                Quick tips:
+                • Confirm your destination before starting the trip.
+                • If possible, use apps to see estimated prices in advance.
+                • Share your trip details with a friend when travelling late.
+                • Keep your phone charged for maps and emergency contact.
+
+                Public transport is usually cheaper, but taxis are useful at night or when carrying luggage.
+                TEXT,
+                'priority' => 7,
+            ],
+
+            [
+                'category_id'=> 1,
+                'title' => 'Helpful Portuguese Phrases',
+                'answer' => <<<TEXT
+                Here are useful Portuguese phrases for daily situations:
+
+                • Olá = Hello
+                • Obrigado / Obrigada = Thank you
+                • Desculpe = Sorry / Excuse me
+                • Fala inglês? = Do you speak English?
+                • Onde fica ...? = Where is ...?
+                • Quanto custa? = How much does it cost?
+                • Preciso de ajuda = I need help
+
+                Locals usually appreciate even simple Portuguese, so do not worry about perfect pronunciation.
+                TEXT,
+                'priority' => 5,
+            ],
+
+            [
+                'category_id'=> 1,
+                'title' => 'Who is Sonja?',
+                'answer' => <<<TEXT
+                Sonja is your Erasmus support chatbot for practical questions during your stay.
+
+                Sonja can help with:
+                • Transport and moving around.
+                • Accommodation and daily life questions.
+                • Food, shopping and local services.
+                • Emergency guidance and useful contacts.
+
+                For urgent or sensitive situations, always contact your coordinator or emergency services directly.
+                TEXT,
+                'priority' => 4,
+            ],
+
+            [
+                'category_id'=> 2,
+                'title' => 'If You Are Lost',
+                'answer' => <<<TEXT
+                If you are lost, stay calm and move to a safe, well-lit public place.
+
+                Steps to follow:
+                • Open Google Maps and check your live location.
+                • Share your location with a classmate or coordinator.
+                • Ask for help in a nearby shop, pharmacy or station.
+                • If you feel unsafe, call 112 immediately.
+
+                Save your accommodation address on your phone so you can show it quickly if needed.
+                TEXT,
+                'priority' => 8,
+            ],
+
+            [
+                'category_id'=> 3,
+                'title' => 'If Something Broke in the House',
+                'answer' => <<<TEXT
+                If something breaks in your accommodation, report it as soon as possible.
+
+                Recommended steps:
+                • Take clear photos of the issue.
+                • Inform your landlord, residence manager or coordinator.
+                • Explain what happened and when it started.
+                • Avoid trying risky repairs yourself.
+
+                Reporting problems early helps protect you from being blamed for bigger damage later.
+                TEXT,
+                'priority' => 8,
             ]
         ]);
     }

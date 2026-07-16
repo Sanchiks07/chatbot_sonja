@@ -28,7 +28,9 @@ class CategorySeeder extends Seeder
 
             ['name' => 'Sightseeing'],
             
-            ['name' => 'Emergency']
+            ['name' => 'Emergency'],
+
+            ['name' => 'Shopping']
         ]);
     }
 }

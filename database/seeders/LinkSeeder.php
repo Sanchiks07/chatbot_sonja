@@ -336,6 +336,67 @@ class LinkSeeder extends Seeder
                 'faq_id' => 63,
                 'title' => 'European e-Justice - Find Your Embassy or Consulate',
                 'url' => 'https://e-justice.europa.eu '
+            ],
+
+            // ------ SHOPPING ------
+            [
+                'faq_id' => 66,
+                'title' => 'Centro Colombo',
+                'url' => 'https://www.colombo.pt'
+            ],
+
+            [
+                'faq_id' => 66,
+                'title' => 'Centro Vasco da Gama',
+                'url' => 'https://www.centrovascodagama.pt'
+            ],
+
+            [
+                'faq_id' => 66,
+                'title' => 'Alegro Montijo',
+                'url' => 'https://www.alegro.pt/montijo/'
+            ],
+
+            [
+                'faq_id' => 67,
+                'title' => 'Banco de Portugal - Notes and Coins',
+                'url' => 'https://www.bportugal.pt/en/page/banknotes-and-coins'
+            ],
+
+            [
+                'faq_id' => 67,
+                'title' => 'Google Maps ATMs Near Montijo',
+                'url' => 'https://maps.app.goo.gl/6b8Qw9hRjXfAqfRN8'
+            ],
+
+            [
+                'faq_id' => 68,
+                'title' => 'Uber Portugal',
+                'url' => 'https://www.uber.com/pt/en/'
+            ],
+
+            [
+                'faq_id' => 68,
+                'title' => 'Bolt Portugal',
+                'url' => 'https://bolt.eu/en/cities/lisbon/'
+            ],
+
+            [
+                'faq_id' => 69,
+                'title' => 'Basic Portuguese Phrases',
+                'url' => 'https://www.practiceportuguese.com/learning-notes/basic-portuguese-phrases/'
+            ],
+
+            [
+                'faq_id' => 71,
+                'title' => 'Google Maps',
+                'url' => 'https://www.google.com/maps'
+            ],
+
+            [
+                'faq_id' => 72,
+                'title' => 'How to Document Home Damage',
+                'url' => 'https://www.wikihow.com/Document-Property-Damage'
             ]
         ]);
     }

@@ -384,6 +384,8 @@ class SynonymSeeder extends Seeder
             [
                 'keyword_id' => 15,
                 'words' => json_encode([
+                    'hungry',
+                    'im hungry',
                     'restaurant',
                     'restaurants',
                     'café',
@@ -1362,6 +1364,7 @@ class SynonymSeeder extends Seeder
             [
                 'keyword_id' => 52,
                 'words' => json_encode([
+                    'dying',
                     'emergency',
                     'urgent',
                     '112',
@@ -1668,6 +1671,241 @@ class SynonymSeeder extends Seeder
                     'emergency',
                     'copy',
                     'digital'
+                ])
+            ],
+
+            // ------ SHOPPING ------
+            [
+                'keyword_id' => 64,
+                'words' => json_encode([
+                    'clothes',
+                    'clothing',
+                    'apparel',
+                    'garments',
+                    'fashion',
+                    'outfit',
+                    'outfits',
+                    'wardrobe',
+                    'jacket',
+                    'coat',
+                    'hoodie',
+                    'shirt',
+                    'tshirt',
+                    'trousers',
+                    'jeans',
+                    'shoes',
+                    'sneakers',
+                    'dress',
+                    'store',
+                    'shop'
+                ])
+            ],
+
+            [
+                'keyword_id' => 65,
+                'words' => json_encode([
+                    'buy',
+                    'purchase',
+                    'shopping',
+                    'checkout',
+                    'discount',
+                    'sale',
+                    'saldos',
+                    'offer',
+                    'deal',
+                    'budget',
+                    'cheap',
+                    'affordable',
+                    'price',
+                    'cost',
+                    'return',
+                    'exchange',
+                    'receipt',
+                    'fitting room',
+                    'try on',
+                    'second hand'
+                ])
+            ],
+
+            [
+                'keyword_id' => 66,
+                'words' => json_encode([
+                    'shopping centre',
+                    'shopping center',
+                    'mall',
+                    'malls',
+                    'centre',
+                    'center',
+                    'complex',
+                    'retail',
+                    'stores',
+                    'food court',
+                    'colombo',
+                    'vasco da gama',
+                    'alegro montijo',
+                    'indoor',
+                    'indoor shopping',
+                    'opening hours',
+                    'escalator',
+                    'parking',
+                    'cinema',
+                    'hypermarket'
+                ])
+            ],
+
+            [
+                'keyword_id' => 67,
+                'words' => json_encode([
+                    'money',
+                    'cash',
+                    'withdraw',
+                    'withdrawal',
+                    'atm',
+                    'multibanco',
+                    'bank',
+                    'bank machine',
+                    'card',
+                    'debit card',
+                    'credit card',
+                    'pin',
+                    'fees',
+                    'commission',
+                    'euros',
+                    'currency',
+                    'exchange',
+                    'balance',
+                    'receipt',
+                    'cashback'
+                ])
+            ],
+
+            [
+                'keyword_id' => 68,
+                'words' => json_encode([
+                    'taxi',
+                    'cab',
+                    'ride',
+                    'rideshare',
+                    'uber',
+                    'bolt',
+                    'driver',
+                    'pickup',
+                    'dropoff',
+                    'fare',
+                    'meter',
+                    'booking',
+                    'trip',
+                    'airport transfer',
+                    'transport',
+                    'night ride',
+                    'private hire',
+                    'ride app',
+                    'car service',
+                    'vehicle'
+                ])
+            ],
+
+            [
+                'keyword_id' => 69,
+                'words' => json_encode([
+                    'portuguese',
+                    'phrases',
+                    'phrase',
+                    'vocabulary',
+                    'words',
+                    'expressions',
+                    'greetings',
+                    'hello',
+                    'obrigado',
+                    'obrigada',
+                    'desculpe',
+                    'por favor',
+                    'fala ingles',
+                    'onde fica',
+                    'quanto custa',
+                    'translation',
+                    'pronunciation',
+                    'beginner',
+                    'language',
+                    'basics'
+                ])
+            ],
+
+            [
+                'keyword_id' => 70,
+                'words' => json_encode([
+                    'sonja',
+                    'chatbot',
+                    'assistant',
+                    'bot',
+                    'help',
+                    'support',
+                    'information',
+                    'guide',
+                    'questions',
+                    'answers',
+                    'purpose',
+                    'features',
+                    'capabilities',
+                    'topics',
+                    'erasmus',
+                    'coordinator',
+                    'advice',
+                    'service',
+                    'digital assistant',
+                    'faq'
+                ])
+            ],
+
+            [
+                'keyword_id' => 71,
+                'words' => json_encode([
+                    'lost',
+                    'missing',
+                    'directions',
+                    'way',
+                    'location',
+                    'map',
+                    'maps',
+                    'navigation',
+                    'route',
+                    'where am i',
+                    'find my way',
+                    'share location',
+                    'address',
+                    'landmark',
+                    'station',
+                    'safe place',
+                    'unsafe',
+                    'guidance',
+                    'return home',
+                    'orientation'
+                ])
+            ],
+
+            [
+                'keyword_id' => 72,
+                'words' => json_encode([
+                    'broken',
+                    'broke',
+                    'damage',
+                    'damaged',
+                    'repair',
+                    'maintenance',
+                    'fix',
+                    'landlord',
+                    'residence',
+                    'accommodation',
+                    'house',
+                    'apartment',
+                    'room',
+                    'leak',
+                    'electricity',
+                    'plumbing',
+                    'appliance',
+                    'report',
+                    'photos',
+                    'issue'
                 ])
             ]
         ]);

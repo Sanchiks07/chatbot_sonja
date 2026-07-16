@@ -525,6 +525,7 @@ class KeywordSeeder extends Seeder
             [
                 'faq_id' => 15,
                 'keywords' => json_encode([
+                    'help im hungry',
                     'where can i eat',
                     'places to eat nearby',
                     'good restaurants nearby',
@@ -2399,6 +2400,243 @@ class KeywordSeeder extends Seeder
                     'erasmus passport problem',
                     'erasmus id card problem',
                     'important travel document lost'
+                ])
+            ],
+
+            // ------ SHOPPING ------
+            [
+                'faq_id' => 64,
+                'keywords' => json_encode([
+                    'where can i buy clothes',
+                    'where to buy clothes',
+                    'i need clothes',
+                    'clothing stores near me',
+                    'best clothing stores',
+                    'cheap clothes in lisbon',
+                    'cheap clothes in lisboa',
+                    'buy winter clothes',
+                    'buy summer clothes',
+                    'where can i get jackets',
+                    'where can i get shoes',
+                    'where can i buy outfits',
+                    'fashion stores lisbon',
+                    'fashion stores lisboa',
+                    'clothes in montijo',
+                    'student budget clothes',
+                    'second hand clothes',
+                    'thrift stores lisbon',
+                    'outlet clothes portugal',
+                    'clothes shopping recommendations'
+                ])
+            ],
+
+            [
+                'faq_id' => 65,
+                'keywords' => json_encode([
+                    'how do i buy clothes',
+                    'tips for buying clothes',
+                    'where can i shop for clothes',
+                    'best time to buy clothes',
+                    'are there sales in portugal',
+                    'what is saldos',
+                    'student discounts on clothes',
+                    'how to save money on clothes',
+                    'buying clothes in portugal',
+                    'clothes return policy portugal',
+                    'can i return clothes',
+                    'how to exchange clothes',
+                    'where to buy cheap outfits',
+                    'buy basic clothes quickly',
+                    'shop for clothes on budget',
+                    'best clothing deals',
+                    'where are clothing sales',
+                    'need affordable fashion',
+                    'how to compare clothes prices',
+                    'clothing shopping tips'
+                ])
+            ],
+
+            [
+                'faq_id' => 66,
+                'keywords' => json_encode([
+                    'where is the shopping centre',
+                    'nearest shopping centre',
+                    'best shopping centres lisbon',
+                    'best shopping centres lisboa',
+                    'shopping mall near me',
+                    'where can i find a mall',
+                    'where is colombo shopping centre',
+                    'where is vasco da gama shopping centre',
+                    'where is alegro montijo',
+                    'mall with clothing stores',
+                    'shopping centre opening hours',
+                    'shopping centre with food court',
+                    'indoor shopping places',
+                    'large mall in lisbon',
+                    'shopping centre recommendations',
+                    'where can i shop indoors',
+                    'shopping mall in montijo',
+                    'mall near lisbon',
+                    'where can i buy clothes in one place',
+                    'shopping centre for students'
+                ])
+            ],
+
+            [
+                'faq_id' => 67,
+                'keywords' => json_encode([
+                    'i need a bank',
+                    'need a bank',
+                    'where can i withdraw cash',
+                    'how can i withdraw money',
+                    'nearest atm',
+                    'where is an atm',
+                    'cash withdrawal',
+                    'how to get cash in portugal',
+                    'can i pay with card in portugal',
+                    'do i need cash in portugal',
+                    'multibanco',
+                    'atm in montijo',
+                    'atm in lisbon',
+                    'withdraw euros',
+                    'can i use foreign card at atm',
+                    'atm fees portugal',
+                    'how to avoid atm fees',
+                    'money exchange or atm',
+                    'safe way to withdraw cash',
+                    'my card was kept by atm',
+                    'cash for small shops',
+                    'bank machine portugal'
+                ])
+            ],
+
+            [
+                'faq_id' => 68,
+                'keywords' => json_encode([
+                    'how do i get a taxi',
+                    'where can i get a taxi',
+                    'taxi in montijo',
+                    'taxi in lisbon',
+                    'uber or bolt',
+                    'ride app portugal',
+                    'how much is a taxi',
+                    'safe taxi at night',
+                    'book a ride',
+                    'need transport now',
+                    'ride to airport',
+                    'call a taxi',
+                    'cab near me',
+                    'taxi number',
+                    'private transport lisbon',
+                    'late night transport',
+                    'best way to get home at night',
+                    'how to use uber in portugal',
+                    'how to use bolt in portugal',
+                    'taxi app recommendation'
+                ])
+            ],
+
+            [
+                'faq_id' => 69,
+                'keywords' => json_encode([
+                    'helpful portuguese phrases',
+                    'basic portuguese words',
+                    'what should i say in portuguese',
+                    'portuguese for beginners',
+                    'common portuguese expressions',
+                    'how to say thank you in portuguese',
+                    'how to ask for help in portuguese',
+                    'how to ask directions in portuguese',
+                    'simple portuguese sentences',
+                    'phrases for daily life',
+                    'portuguese travel phrases',
+                    'survival portuguese',
+                    'can you teach me portuguese basics',
+                    'portuguese useful words',
+                    'polite words in portuguese',
+                    'how to speak with locals',
+                    'everyday portuguese phrases',
+                    'what does obrigado mean',
+                    'what does desculpe mean',
+                    'do you speak english in portuguese'
+                ])
+            ],
+
+            [
+                'faq_id' => 70,
+                'keywords' => json_encode([
+                    'who is sonja',
+                    'what is sonja',
+                    'what can sonja do',
+                    'what do you help with',
+                    'what can i ask you',
+                    'how does sonja work',
+                    'about sonja',
+                    'sonja information',
+                    'are you a chatbot',
+                    'what is this chatbot for',
+                    'can sonja help me',
+                    'what topics can sonja answer',
+                    'who made sonja',
+                    'how should i use sonja',
+                    'what is your purpose',
+                    'what are your limits',
+                    'can i trust sonja information',
+                    'who do i contact if sonja is not enough',
+                    'what kind of questions to ask sonja',
+                    'sonja basic info'
+                ])
+            ],
+
+            [
+                'faq_id' => 71,
+                'keywords' => json_encode([
+                    'i am lost',
+                    'im lost',
+                    'i got lost',
+                    'i dont know where i am',
+                    'how do i get back home',
+                    'help me find my way',
+                    'lost in lisbon',
+                    'lost in montijo',
+                    'how to share my location',
+                    'where am i',
+                    'what to do if i am lost',
+                    'need directions',
+                    'how to ask for directions',
+                    'i cant find my accommodation',
+                    'i cant find my house',
+                    'how to use maps when lost',
+                    'i feel lost and unsafe',
+                    'who should i call if im lost',
+                    'how to return to accommodation',
+                    'finding my location'
+                ])
+            ],
+
+            [
+                'faq_id' => 72,
+                'keywords' => json_encode([
+                    'something broke in the house',
+                    'something is broken at home',
+                    'appliance is broken',
+                    'my room is damaged',
+                    'water leak in house',
+                    'electricity problem at home',
+                    'how to report damage',
+                    'who do i contact for repairs',
+                    'landlord repair issue',
+                    'residence maintenance request',
+                    'broken door in accommodation',
+                    'broken window in accommodation',
+                    'sink is not working',
+                    'toilet is broken',
+                    'shower is broken',
+                    'kitchen appliance stopped working',
+                    'need maintenance in accommodation',
+                    'house repair during erasmus',
+                    'who pays for damages',
+                    'how to document damage'
                 ])
             ]
         ]);
