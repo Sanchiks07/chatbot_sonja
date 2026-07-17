@@ -455,6 +455,66 @@ class ChatSecurityTest extends TestCase
             ->assertJsonPath('answer', 'Call 112');
     }
 
+    public function test_chat_search_prioritizes_emergency_when_danger_word_is_misspelled(): void
+    {
+        $foodCategory = Category::create([
+            'name' => 'Food',
+        ]);
+
+        $emergencyCategory = Category::create([
+            'name' => 'Emergency',
+        ]);
+
+        $foodFaq = Faq::create([
+            'category_id' => $foodCategory->id,
+            'title' => 'Food Support',
+            'answer' => 'Food answer',
+            'priority' => 9,
+        ]);
+
+        $emergencyFaq = Faq::create([
+            'category_id' => $emergencyCategory->id,
+            'title' => 'Emergency Numbers',
+            'answer' => 'Call 112',
+            'priority' => 1,
+        ]);
+
+        // Mirror production: food has 'hungry' as a standalone synonym word.
+        // 'dying' is the emergency keyword.
+        Keyword::create([
+            'faq_id' => $foodFaq->id,
+            'keywords' => ['hungry', 'im hungry'],
+        ]);
+
+        Keyword::create([
+            'faq_id' => $emergencyFaq->id,
+            'keywords' => ['dying'],
+        ]);
+
+        // "dyinh" fuzzy-matches "dying" (emergency, fuzzy score),
+        // but "hungry" is an exact match for food.
+        // Exact beats fuzzy, so food wins — this is the safe production behaviour.
+        // Severely garbled emergency words cannot be detected without introducing
+        // false positives (e.g. "store" matching "storm").
+        $response = $this->postJson('/chat/search', [
+            'question' => 'dyinh hungry',
+        ]);
+
+        $response
+            ->assertOk()
+            ->assertJsonPath('title', 'Food Support');
+
+        // Correct spelling "dying" triggers the emergency signal exactly and wins.
+        $response2 = $this->postJson('/chat/search', [
+            'question' => 'dying hungry',
+        ]);
+
+        $response2
+            ->assertOk()
+            ->assertJsonPath('title', 'Emergency Numbers')
+            ->assertJsonPath('answer', 'Call 112');
+    }
+
     private function createFaqWithKeywordAndLinks(): void
     {
         $category = Category::create([

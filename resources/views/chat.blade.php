@@ -27,7 +27,9 @@
                     </div>
                 </div>
 
-                <form class="chat-input" id="chatForm" data-search-route="{{ route('chat.search') }}">
+                <form class="chat-input" id="chatForm"
+                    data-search-route="{{ route('chat.search') }}"
+                    data-initial-question="{{ e(request()->query('q', '')) }}">
                     @csrf
 
                     <input type="text" id="question" placeholder="Ask Sonja anything..." autocomplete="off" maxlength="500" required>

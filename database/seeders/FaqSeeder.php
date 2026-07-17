@@ -253,6 +253,13 @@ class FaqSeeder extends Seeder
                 'answer' => <<<TEXT
                 There are many restaurants, cafés and bakeries around Montijo offering Portuguese and international cuisine.
 
+                Popular food options you can find locally include:
+                • Pastel de Nata (Portuguese custard tart)
+                • Burger and hamburger restaurants
+                • Pizza and pasta places
+                • Kebab and grilled meat restaurants
+                • Traditional Portuguese dishes like Bacalhau and Bifana
+
                 Google Maps is the easiest way to discover nearby places, check reviews and opening hours.
                 TEXT,
                 'priority' => 5,

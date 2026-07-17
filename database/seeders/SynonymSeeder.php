@@ -405,7 +405,19 @@ class SynonymSeeder extends Seeder
                     'coffee',
                     'espresso',
                     'dessert',
-                    'menu'
+                    'menu',
+                    'burger',
+                    'hamburger',
+                    'kebab',
+                    'pizza',
+                    'pasta',
+                    'sandwich',
+                    'wrap',
+                    'sushi',
+                    'noodles',
+                    'fast food',
+                    'street food',
+                    'snack'
                 ])
             ],
 
@@ -553,15 +565,20 @@ class SynonymSeeder extends Seeder
                     'culinary',
                     'regional',
                     'pasteldenata',
+                    'pastel de nata',
                     'bacalhau',
                     'bifana',
                     'francesinha',
                     'caldoverde',
+                    'caldo verde',
                     'flavour',
                     'tasting',
                     'localdish',
                     'heritage',
-                    'recipe'
+                    'recipe',
+                    'custard tart',
+                    'piri piri',
+                    'sardines'
                 ])
             ],
 

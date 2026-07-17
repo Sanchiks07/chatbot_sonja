@@ -1,4 +1,6 @@
 <x-layout>
+
+    {{-- ═══════════════ HERO ═══════════════ --}}
     <section class="hero">
         <div class="hero-content">
             <div class="hero-brand">
@@ -7,24 +9,27 @@
             </div>
 
             <h1>Welcome to Sonja</h1>
-            <p class="subtitle">
-                Your Erasmus+ assistant for life in Portugal.
-            </p>
+            <p class="subtitle">Your Erasmus guide for life in Portugal.</p>
+            <p class="description">Need help with accommodation, transport, healthcare or everyday questions? Just ask.</p>
 
-            <p class="description">
-                Whether you've just arrived or have already settled in, I'm here to help you
-                find answers to your questions. From transport and accommodation to healthcare, 
-                restaurants, and local recommendations, simply ask and I'll do my best to help.
-            </p>
-
-            <a href="{{ route('chat') }}" class="primary-btn">
-                Start Chatting
-            </a>
+            <form class="hero-search" action="{{ route('chat') }}" method="GET">
+                <input
+                    type="text"
+                    name="q"
+                    class="hero-search-input"
+                    placeholder="Ask about buses, housing, supermarkets…"
+                    autocomplete="off"
+                    aria-label="Ask Sonja a question"
+                >
+                <button type="submit" class="hero-search-btn">Ask Sonja</button>
+            </form>
         </div>
     </section>
 
-    <section class="features">
-        <h2>How I Can Help</h2>
+    {{-- ═══════════════ POPULAR TOPICS ═══════════════ --}}
+    <div class="band-subtle">
+        <section class="features">
+            <h2>Popular Topics</h2>
 
         <div class="feature-grid">
             <div class="card card-accommodation">
@@ -41,9 +46,7 @@
                     </svg>
                 </span>
                 <h3>Accommodation</h3>
-                <p>
-                    Information about housing, common issues, and useful tips for your stay.
-                </p>
+                <p>Check-in, repairs, rules, and housing help.</p>
             </div>
 
             <div class="card card-transport">
@@ -60,9 +63,7 @@
                     </svg>
                 </span>
                 <h3>Transport</h3>
-                <p>
-                    Bus routes, travel cards, getting around, and transportation advice.
-                </p>
+                <p>Buses, ferries, travel cards, and getting around.</p>
             </div>
 
             <div class="card card-shopping">
@@ -81,9 +82,7 @@
                     </svg>
                 </span>
                 <h3>Shopping</h3>
-                <p>
-                    Supermarkets, pharmacies, shopping centres, and everyday essentials.
-                </p>
+                <p>Supermarkets, malls, and everyday essentials.</p>
             </div>
 
             <div class="card card-food">
@@ -108,9 +107,7 @@
                     </svg>
                 </span>
                 <h3>Food & Cafés</h3>
-                <p>
-                    Discover restaurants, cafés, local food, and student-friendly places.
-                </p>
+                <p>Restaurants, local dishes, and delivery options.</p>
             </div>
 
             <div class="card card-healthcare">
@@ -135,9 +132,7 @@
                     </svg>
                 </span>
                 <h3>Healthcare</h3>
-                <p>
-                    Find hospitals, pharmacies, emergency contacts, and medical information.
-                </p>
+                <p>Hospitals, pharmacies, and medical advice.</p>
             </div>
 
             <div class="card card-activities">
@@ -156,47 +151,79 @@
                     </svg>
                 </span>
                 <h3>Sights & Activities</h3>
-                <p>
-                    Discover local attractions, cultural sites, and must-see places in the Lisbon and Montijo area.
-                </p>
+                <p>Beaches, museums, parks, and day trips.</p>
             </div>
         </div>
     </section>
+    </div>
 
+    {{-- ═══════════════ USEFUL TODAY ═══════════════ --}}
+    <section class="useful-today">
+        <p class="section-eyebrow">Useful today</p>
+        <h2>Get quick answers</h2>
+        <div class="useful-grid">
+            <a href="{{ route('chat') }}?q=How+do+I+get+a+transport+card" class="useful-card">
+                <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1l0 -4"/><path d="M16 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M10 5h7c2.761 0 5 3.134 5 7v5h-2"/><path d="M16 17h-8"/><path d="M16 5l1.5 7h4.5"/><path d="M9.5 10h7.5"/><path d="M12 5v5"/><path d="M5 9v11"/></svg></span>
+                <span class="useful-label">Get a transport card</span>
+            </a>
+            <a href="{{ route('chat') }}?q=What+are+the+emergency+numbers+in+Portugal" class="useful-card">
+                <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/><path d="M15 6h6m-3 -3v6"/></svg></span>
+                <span class="useful-label">Emergency numbers</span>
+            </a>
+            <a href="{{ route('chat') }}?q=Where+can+I+find+supermarkets+nearby" class="useful-card">
+                <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M17 17h-11v-14h-2"/><path d="M6 5l14 1l-1 7h-13"/></svg></span>
+                <span class="useful-label">Find supermarkets</span>
+            </a>
+            <a href="{{ route('chat') }}?q=Where+is+the+orientation+meeting+point" class="useful-card">
+                <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0"/></svg></span>
+                <span class="useful-label">Orientation meeting point</span>
+            </a>
+            <a href="{{ route('chat') }}?q=Where+is+the+nearest+pharmacy" class="useful-card">
+                <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.207 3.793a5.95 5.95 0 0 1 0 8.414l-8 8a5.95 5.95 0 0 1 -8.414 -8.414l8 -8a5.95 5.95 0 0 1 8.414 0m-7 1.414l-4.294 4.293l5.586 5.586l4.294 -4.292a3.95 3.95 0 1 0 -5.586 -5.586"/></svg></span>
+                <span class="useful-label">Nearest pharmacy</span>
+            </a>
+            <a href="{{ route('chat') }}?q=Where+can+I+withdraw+cash" class="useful-card">
+                <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 6m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"/><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M7 12l0 0"/><path d="M17 12l0 0"/></svg></span>
+                <span class="useful-label">Withdraw cash</span>
+            </a>
+        </div>
+    </section>
+
+    {{-- ═══════════════ POPULAR QUESTIONS ═══════════════ --}}
+    <div class="band-subtle">
     <section class="questions">
-        <h2>Not Sure What to Ask?</h2>
+        <p class="section-eyebrow">Popular questions</p>
+        <h2>Not sure where to start?</h2>
+        <p>Browse questions students ask every day.</p>
 
-        <p>
-            Here are some questions students frequently ask:
-        </p>
-
+        <div class="question-marquee-wrap">
         <div class="question-marquee" aria-label="Frequently asked student questions">
             <div class="question-row question-row--ltr">
                 <div class="question-track">
                     <div class="question-set">
-                        <div class="question-chip">How do I check in to my accommodation?</div>
-                        <div class="question-chip">Where can I buy groceries nearby?</div>
-                        <div class="question-chip">How do I get a transport card?</div>
-                        <div class="question-chip">What should I do in an emergency?</div>
-                        <div class="question-chip">Where is the nearest pharmacy?</div>
-                        <div class="question-chip">How do I contact the EPD office?</div>
-                        <div class="question-chip">Where can I eat traditional Portuguese food?</div>
-                        <div class="question-chip">What places should I visit on the weekend?</div>
-                        <div class="question-chip">Where can I do my laundry?</div>
-                        <div class="question-chip">Where can I find cheap shopping?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I check in to my accommodation?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I buy groceries nearby?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I get a transport card?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> What should I do in an emergency?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where is the nearest pharmacy?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I contact the EPD office?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I eat traditional Portuguese food?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> What places should I visit on the weekend?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I do my laundry?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I find cheap shopping?</div>
                     </div>
 
-                    <div class="question-set">
-                        <div class="question-chip">How do I check in to my accommodation?</div>
-                        <div class="question-chip">Where can I buy groceries nearby?</div>
-                        <div class="question-chip">How do I get a transport card?</div>
-                        <div class="question-chip">What should I do in an emergency?</div>
-                        <div class="question-chip">Where is the nearest pharmacy?</div>
-                        <div class="question-chip">How do I contact the EPD office?</div>
-                        <div class="question-chip">Where can I eat traditional Portuguese food?</div>
-                        <div class="question-chip">What places should I visit on the weekend?</div>
-                        <div class="question-chip">Where can I do my laundry?</div>
-                        <div class="question-chip">Where can I find cheap shopping?</div>
+                    <div class="question-set" aria-hidden="true">
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I check in to my accommodation?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I buy groceries nearby?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I get a transport card?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> What should I do in an emergency?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where is the nearest pharmacy?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I contact the EPD office?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I eat traditional Portuguese food?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> What places should I visit on the weekend?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I do my laundry?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I find cheap shopping?</div>
                     </div>
                 </div>
             </div>
@@ -204,54 +231,35 @@
             <div class="question-row question-row--rtl">
                 <div class="question-track">
                     <div class="question-set" aria-hidden="true">
-                        <div class="question-chip">How do I use public transport?</div>
-                        <div class="question-chip">What should I do if I lose my passport?</div>
-                        <div class="question-chip">Where is the nearest supermarket?</div>
-                        <div class="question-chip">How do I get to the meeting point?</div>
-                        <div class="question-chip">Where can I withdraw cash?</div>
-                        <div class="question-chip">How do I call an ambulance?</div>
-                        <div class="question-chip">What should I do if I feel sick?</div>
-                        <div class="question-chip">What are the best beaches nearby?</div>
-                        <div class="question-chip">Where can I buy souvenirs?</div>
-                        <div class="question-chip">How do I contact my coordinator?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I use public transport?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> What should I do if I lose my passport?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where is the nearest supermarket?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I get to the meeting point?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I withdraw cash?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I call an ambulance?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> What should I do if I feel sick?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> What are the best beaches nearby?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I buy souvenirs?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I contact my coordinator?</div>
                     </div>
 
                     <div class="question-set" aria-hidden="true">
-                        <div class="question-chip">How do I use public transport?</div>
-                        <div class="question-chip">What should I do if I lose my passport?</div>
-                        <div class="question-chip">Where is the nearest supermarket?</div>
-                        <div class="question-chip">How do I get to the meeting point?</div>
-                        <div class="question-chip">Where can I withdraw cash?</div>
-                        <div class="question-chip">How do I call an ambulance?</div>
-                        <div class="question-chip">What should I do if I feel sick?</div>
-                        <div class="question-chip">What are the best beaches nearby?</div>
-                        <div class="question-chip">Where can I buy souvenirs?</div>
-                        <div class="question-chip">How do I contact my coordinator?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I use public transport?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> What should I do if I lose my passport?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where is the nearest supermarket?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I get to the meeting point?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I withdraw cash?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I call an ambulance?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> What should I do if I feel sick?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> What are the best beaches nearby?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> Where can I buy souvenirs?</div>
+                        <div class="question-chip"><span class="chip-icon" aria-hidden="true">💬</span> How do I contact my coordinator?</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="about">
-        <div class="about-box">
-            <h2>About Sonja</h2>
-
-            <p>
-                Sonja was created to make everyday student life easier. Instead of searching
-                through long documents or waiting for a reply, you can simply ask your question
-                and receive guidance in seconds.
-            </p>
-
-            <p>
-                While I can't replace your Erasmus coordinator, I can answer many of the
-                questions students ask every day and point you in the right direction whenever
-                you need help.
-            </p>
-
-            <a href="{{ route('chat') }}" class="secondary-btn">
-                Ask Sonja
-            </a>
         </div>
     </section>
+    </div>
+
 </x-layout>

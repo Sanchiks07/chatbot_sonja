@@ -9,6 +9,9 @@ const csrfToken = document
 
 let typingBubble = null;
 
+// Null guard: script.js runs on every page; chatForm only exists on the chat page.
+if (form) {
+
 form.addEventListener("submit", async function (e) {
 
     e.preventDefault();
@@ -91,6 +94,16 @@ form.addEventListener("submit", async function (e) {
     scrollToBottom();
 
 });
+
+// Auto-send a question pre-filled from the home page search or quick-action cards.
+// Must come AFTER addEventListener so the handler is already registered.
+const initialQuestion = form.dataset.initialQuestion?.trim();
+if (initialQuestion) {
+    input.value = initialQuestion;
+    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
+}
+
+} // end if (form)
 
 function addMessage(text, sender, links = [])
 {

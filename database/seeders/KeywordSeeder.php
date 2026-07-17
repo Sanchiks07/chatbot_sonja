@@ -199,6 +199,7 @@ class KeywordSeeder extends Seeder
             [
                 'faq_id' => 6,
                 'keywords' => json_encode([
+                    'how do I get a transport card',
                     'what is navegante card',
                     'how do i use navegante',
                     'lisbon transport card',
@@ -489,6 +490,7 @@ class KeywordSeeder extends Seeder
             [
                 'faq_id' => 14,
                 'keywords' => json_encode([
+                    'where can I find supermarkets nearby',
                     'where can i buy groceries',
                     'where can i buy food',
                     'nearest supermarket',
@@ -555,7 +557,20 @@ class KeywordSeeder extends Seeder
                     'places serving food',
                     'restaurants open now',
                     'cafes near me',
-                    'where should i eat out'
+                    'where should i eat out',
+                    'where can i get a burger',
+                    'where can i get a hamburger',
+                    'burger places nearby',
+                    'hamburger restaurant montijo',
+                    'where can i get pizza',
+                    'pizza places nearby',
+                    'pizza delivery nearby',
+                    'where can i get kebab',
+                    'kebab near me',
+                    'where can i get pastel de nata',
+                    'where can i find pastel de nata',
+                    'where to eat pastel de nata',
+                    'where can i get fast food'
                 ])
             ],
 
@@ -1337,6 +1352,7 @@ class KeywordSeeder extends Seeder
             [
                 'faq_id' => 37,
                 'keywords' => json_encode([
+                    'Where is the orientation meeting point',
                     'where is the meeting point',
                     'where do we meet',
                     'where should i meet',
