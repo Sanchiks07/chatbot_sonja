@@ -11,102 +11,88 @@ let typingBubble = null;
 
 // Null guard: script.js runs on every page; chatForm only exists on the chat page.
 if (form) {
+    form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        const question = input.value.trim();
 
-form.addEventListener("submit", async function (e) {
-
-    e.preventDefault();
-
-    const question = input.value.trim();
-
-    if (question === "") {
-        return;
-    }
-
-    // Show student's message immediately
-    addMessage(question, "user");
-
-    // Clear input
-    input.value = "";
-
-    scrollToBottom();
-
-    // Show Sonja typing immediately
-    showTyping();
-
-    try {
-
-        const response = await fetch(searchRoute, {
-
-            method: "POST",
-
-            headers: {
-                "Accept": "application/json",
-                "Content-Type": "application/json",
-                "X-CSRF-TOKEN": csrfToken
-            },
-
-            body: JSON.stringify({
-                question: question
-            })
-
-        });
-
-        if (!response.ok) {
-
-            removeTyping();
-
-            const errorData = await response.json().catch(() => ({}));
-
-            addMessage(
-                errorData.message ||
-                "Sorry, something went wrong. Please try again later.",
-                "bot"
-            );
-
-            scrollToBottom();
-
+        if (question === "") {
             return;
         }
 
-        const data = await response.json();
+        // Show student's message immediately
+        addMessage(question, "user");
 
-        // Make Sonja feel more natural
-        await new Promise(resolve => setTimeout(resolve, 800));
+        // Clear input
+        input.value = "";
+        scrollToBottom();
 
-        removeTyping();
+        // Show Sonja typing immediately
+        showTyping();
 
-        addMessage(data.answer, "bot", data.links);
+        try {
+            const response = await fetch(searchRoute, {
+                method: "POST",
+                headers: {
+                    "Accept": "application/json",
+                    "Content-Type": "application/json",
+                    "X-CSRF-TOKEN": csrfToken
+                },
+                body: JSON.stringify({
+                    question: question
+                })
+            });
 
+            if (!response.ok) {
+                removeTyping();
+                const errorData = await response.json().catch(() => ({}));
+
+                addMessage(
+                    errorData.message ||
+                    "Sorry, something went wrong. Please try again later.",
+                    "bot"
+                );
+
+                scrollToBottom();
+                return;
+            }
+
+            const data = await response.json();
+
+            // Make Sonja feel more natural
+            await new Promise(resolve => setTimeout(resolve, 800));
+
+            removeTyping();
+            addMessage(data.answer, "bot", data.links);
+        } catch (error) {
+            console.error(error);
+            removeTyping();
+
+            if (!navigator.onLine) {
+                addMessage(
+                    "📶 It looks like you're currently offline.\n\nI need an internet connection to search my knowledge base and answer your questions.\n\nPlease reconnect to the internet and try again.",
+                    "bot"
+                );
+            } else {
+                addMessage(
+                    "Sorry, something went wrong while processing your request. Please try again in a moment.",
+                    "bot"
+                );
+            }
+        }
+
+        scrollToBottom();
+    });
+
+    // Auto-send a question pre-filled from the home page search or quick-action cards.
+    // Must come AFTER addEventListener so the handler is already registered.
+    const initialQuestion = form.dataset.initialQuestion?.trim();
+    if (initialQuestion) {
+        input.value = initialQuestion;
+        form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
     }
-    catch (error) {
-
-        console.error(error);
-
-        removeTyping();
-
-        addMessage(
-            "Sorry, something went wrong. Please try again later.",
-            "bot"
-        );
-
-    }
-
-    scrollToBottom();
-
-});
-
-// Auto-send a question pre-filled from the home page search or quick-action cards.
-// Must come AFTER addEventListener so the handler is already registered.
-const initialQuestion = form.dataset.initialQuestion?.trim();
-if (initialQuestion) {
-    input.value = initialQuestion;
-    form.dispatchEvent(new Event("submit", { bubbles: true, cancelable: true }));
 }
 
-} // end if (form)
-
-function addMessage(text, sender, links = [])
-{
+function addMessage(text, sender, links = []) {
     const message = document.createElement("div");
     message.className = `message ${sender}`;
 
@@ -116,22 +102,18 @@ function addMessage(text, sender, links = [])
     const parts = String(text ?? "").split("\n");
 
     parts.forEach((part, index) => {
-
         if (index > 0) {
             bubble.appendChild(document.createElement("br"));
         }
 
         bubble.appendChild(document.createTextNode(part));
-
     });
 
     if (links && links.length > 0) {
-
         const linksContainer = document.createElement("div");
         linksContainer.className = "chat-links";
 
         links.forEach(link => {
-
             if (!isSafeUrl(link.url)) {
                 return;
             }
@@ -148,27 +130,21 @@ function addMessage(text, sender, links = [])
         });
 
         if (linksContainer.childNodes.length > 0) {
-
             bubble.appendChild(document.createElement("br"));
             bubble.appendChild(linksContainer);
-
         }
-
     }
 
     message.appendChild(bubble);
-
     messages.appendChild(message);
 }
 
-function showTyping()
-{
+function showTyping() {
     if (typingBubble) {
         return;
     }
 
     typingBubble = document.createElement("div");
-
     typingBubble.className = "message bot typing-message";
 
     typingBubble.innerHTML = `
@@ -180,7 +156,6 @@ function showTyping()
     `;
 
     messages.appendChild(typingBubble);
-
     scrollToBottom();
 }
 
@@ -203,3 +178,50 @@ function isSafeUrl(url) {
 function scrollToBottom() {
     messages.scrollTop = messages.scrollHeight;
 }
+
+
+/* ------ SERVICE WORKER UPLOAD ------ */
+if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker
+            .register("/sw.js")
+            .then(registration => {
+                console.log("Service Worker registered:", registration);
+            })
+            .catch(error => {
+                console.error("Service Worker registration failed:", error);
+            });
+    });
+}
+
+
+/* ------ SPLASH SCREEN------ */
+const splash = document.getElementById("splash-screen");
+const loadingText = document.getElementById("loading-text");
+
+const loadingMessages = [
+    "Preparing Sonja...",
+    "Loading student resources...",
+    "Getting everything ready...",
+    "Almost there..."
+];
+
+let messageIndex = 0;
+
+const loadingInterval = setInterval(() => {
+    if (!loadingText) return;
+    messageIndex++;
+
+    loadingText.textContent = loadingMessages[messageIndex % loadingMessages.length];
+}, 900);
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        splash.classList.add("hidden");
+        clearInterval(loadingInterval);
+
+        setTimeout(() => {
+            splash.remove();
+        }, 600);
+    }, 1200);
+});

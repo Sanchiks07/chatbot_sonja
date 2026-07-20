@@ -1,0 +1,107 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offline | EPD Assistant - Sonja</title>
+    <link rel="stylesheet" href="{{ asset('style.css') }}">
+    <script src="{{ asset('script.js') }}" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="offline-page">
+        <!-- Hero -->
+        <section class="offline-hero">
+            <div class="offline-logo">
+                <img src="{{ asset('img/epd-logo-2.png') }}" alt="EPD Logo">
+            </div>
+
+            <p class="eyebrow">European Projects Development</p>
+            <h1>You're Offline</h1>
+            <p class="offline-subtitle">Sonja can't connect to the internet right now.</p>
+            <p class="offline-description">
+                Don't worry. Once your internet connection returns, you'll be able to continue chatting normally.
+                In the meantime, here are the most important emergency contacts you might need.
+            </p>
+
+            <button onclick="location.reload()" class="hero-search-btn">
+                Try Again
+            </button>
+        </section>
+
+        <!-- Emergency Section -->
+        <section class="offline-section">
+            <p class="section-eyebrow">Emergency Information</p>
+            <h2>Important Numbers</h2>
+
+            <div class="offline-grid">
+                <div class="offline-card emergency">
+                    <div class="offline-icon">🚑</div>
+                    <h3>Emergency Services</h3>
+                    <div class="offline-number">112</div>
+                    <p>Call immediately for police, ambulance or fire emergencies anywhere in Portugal.</p>
+                </div>
+
+                <div class="offline-card">
+                    <div class="offline-icon">👮</div>
+                    <h3>Police (PSP)</h3>
+                    <p>
+                        If you have been robbed, assaulted, lost your passport or need police assistance,
+                        call <strong>112</strong> in an emergency or visit the nearest police station.
+                    </p>
+                </div>
+
+                <div class="offline-card">
+                    <div class="offline-icon">🏥</div>
+                    <h3>Medical Help</h3>
+                    <p>
+                        If your situation is urgent or life-threatening, call <strong>112</strong>.
+                        For minor health issues, visit the nearest hospital or pharmacy once you're able.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Helpful Tips -->
+        <section class="offline-section">
+            <p class="section-eyebrow">While You're Waiting</p>
+            <h2>Things You Can Try</h2>
+
+            <div class="offline-grid">
+                <div class="offline-card">
+                    <div class="offline-icon">📶</div>
+                    <h3>Check Your Connection</h3>
+                    <p>Make sure your Wi-Fi or mobile data is turned on and connected.</p>
+                </div>
+
+                <div class="offline-card">
+                    <div class="offline-icon">🔄</div>
+                    <h3>Reconnect</h3>
+                    <p>After reconnecting, press the <strong>Try Again</strong> button to continue using Sonja.</p>
+                </div>
+
+                <div class="offline-card">
+                    <div class="offline-icon">🏫</div>
+                    <h3>Need Immediate Help?</h3>
+                    <p>If you're with your Erasmus group, contact your EPD coordinator or mentor directly.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <section class="offline-footer">
+            <h3>We'll be back soon.</h3>
+            <p>Sonja will automatically be available again as soon as your internet connection returns.</p>
+        </section>
+    </main>
+
+    <script>
+    window.addEventListener("online", () => {
+        location.reload();
+    });
+    </script>
+</body>
+</html>

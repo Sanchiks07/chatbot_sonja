@@ -285,37 +285,21 @@ class ChatController extends Controller
             $faqHasPhraseMatch = $phraseScore > 0;
             $bestHasPhraseMatch = $highestPhraseScore > 0;
 
-            if (
-                ($faqHasPhraseMatch && !$bestHasPhraseMatch) ||
-                (
-                    $faqHasPhraseMatch &&
-                    $bestHasPhraseMatch &&
-                    (
-                        $phraseScore > $highestPhraseScore ||
-                        (
-                            $phraseScore === $highestPhraseScore &&
-                            (
-                                !$bestFaq ||
-                                $faq->priority > $bestFaq->priority
+            if (($faqHasPhraseMatch && !$bestHasPhraseMatch) || (
+                    $faqHasPhraseMatch && $bestHasPhraseMatch && (
+                        $phraseScore > $highestPhraseScore || (
+                            $phraseScore === $highestPhraseScore && (
+                                !$bestFaq || $faq->priority > $bestFaq->priority
                             )
                         )
                     )
-                ) ||
-                (
-                    !$faqHasPhraseMatch &&
-                    !$bestHasPhraseMatch &&
-                    (
-                        $exactWordScore > $highestExactWordScore ||
-                        (
-                            $exactWordScore === $highestExactWordScore &&
-                            (
-                                $fuzzyWordScore > $highestFuzzyWordScore ||
-                                (
+                ) || (!$faqHasPhraseMatch && !$bestHasPhraseMatch && (
+                        $exactWordScore > $highestExactWordScore || (
+                            $exactWordScore === $highestExactWordScore && (
+                                $fuzzyWordScore > $highestFuzzyWordScore || (
                                     $fuzzyWordScore === $highestFuzzyWordScore &&
-                                    ($exactWordScore > 0 || $fuzzyWordScore > 0) &&
-                                    (
-                                        !$bestFaq ||
-                                        $faq->priority > $bestFaq->priority
+                                    ($exactWordScore > 0 || $fuzzyWordScore > 0) && (
+                                        !$bestFaq || $faq->priority > $bestFaq->priority
                                     )
                                 )
                             )
@@ -333,37 +317,22 @@ class ChatController extends Controller
                 $emergencyHasPhraseMatch = $phraseScore > 0;
                 $bestEmergencyHasPhraseMatch = $highestEmergencyPhraseScore > 0;
 
-                if (
-                    ($emergencyHasPhraseMatch && !$bestEmergencyHasPhraseMatch) ||
-                    (
-                        $emergencyHasPhraseMatch &&
-                        $bestEmergencyHasPhraseMatch &&
-                        (
-                            $phraseScore > $highestEmergencyPhraseScore ||
-                            (
-                                $phraseScore === $highestEmergencyPhraseScore &&
-                                (
-                                    !$bestEmergencyFaq ||
-                                    $faq->priority > $bestEmergencyFaq->priority
+                if (($emergencyHasPhraseMatch && !$bestEmergencyHasPhraseMatch) || (
+                        $emergencyHasPhraseMatch && $bestEmergencyHasPhraseMatch && (
+                            $phraseScore > $highestEmergencyPhraseScore || (
+                                $phraseScore === $highestEmergencyPhraseScore && (
+                                    !$bestEmergencyFaq || $faq->priority > $bestEmergencyFaq->priority
                                 )
                             )
                         )
-                    ) ||
-                    (
-                        !$emergencyHasPhraseMatch &&
-                        !$bestEmergencyHasPhraseMatch &&
-                        (
-                            $exactWordScore > $highestEmergencyExactWordScore ||
-                            (
-                                $exactWordScore === $highestEmergencyExactWordScore &&
-                                (
-                                    $fuzzyWordScore > $highestEmergencyFuzzyWordScore ||
-                                    (
-                                        $fuzzyWordScore === $highestEmergencyFuzzyWordScore &&
-                                        ($exactWordScore > 0 || $fuzzyWordScore > 0) &&
-                                        (
-                                            !$bestEmergencyFaq ||
-                                            $faq->priority > $bestEmergencyFaq->priority
+                    ) || (!$emergencyHasPhraseMatch && !$bestEmergencyHasPhraseMatch && (
+                            $exactWordScore > $highestEmergencyExactWordScore || (
+                                $exactWordScore === $highestEmergencyExactWordScore && (
+                                    $fuzzyWordScore > $highestEmergencyFuzzyWordScore || (
+                                        $fuzzyWordScore === $highestEmergencyFuzzyWordScore && (
+                                            $exactWordScore > 0 || $fuzzyWordScore > 0
+                                        ) && (
+                                            !$bestEmergencyFaq || $faq->priority > $bestEmergencyFaq->priority
                                         )
                                     )
                                 )
@@ -380,14 +349,8 @@ class ChatController extends Controller
             }
         }
 
-        if (
-            $bestEmergencyFaq &&
-            $messageHasStrongEmergencySignal &&
-            $bestEmergencyHasStrongSignal &&
-            (
-                $highestEmergencyPhraseScore > 0 ||
-                $highestEmergencyExactWordScore > 0 ||
-                $highestEmergencyFuzzyWordScore > 0
+        if ($bestEmergencyFaq && $messageHasStrongEmergencySignal && $bestEmergencyHasStrongSignal && (
+                $highestEmergencyPhraseScore > 0 || $highestEmergencyExactWordScore > 0 || $highestEmergencyFuzzyWordScore > 0
             )
         ) {
             $bestFaq = $bestEmergencyFaq;
