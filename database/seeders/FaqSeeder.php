@@ -1084,6 +1084,10 @@ class FaqSeeder extends Seeder
                 Here are useful Portuguese phrases for daily situations:
 
                 • Olá = Hello
+                • Bom dia = Good morning
+                • Boa tarde = Good afternoon
+                • Bom noite = Good evening
+                • Adeus / Tchau = Goodbye
                 • Obrigado / Obrigada = Thank you
                 • Desculpe = Sorry / Excuse me
                 • Fala inglês? = Do you speak English?

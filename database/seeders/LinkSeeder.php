@@ -354,19 +354,13 @@ class LinkSeeder extends Seeder
             [
                 'faq_id' => 66,
                 'title' => 'Alegro Montijo',
-                'url' => 'https://www.alegro.pt/montijo/'
-            ],
-
-            [
-                'faq_id' => 67,
-                'title' => 'Banco de Portugal - Notes and Coins',
-                'url' => 'https://www.bportugal.pt/en/page/banknotes-and-coins'
+                'url' => 'https://alegro.pt/'
             ],
 
             [
                 'faq_id' => 67,
                 'title' => 'Google Maps ATMs Near Montijo',
-                'url' => 'https://maps.app.goo.gl/6b8Qw9hRjXfAqfRN8'
+                'url' => 'https://www.google.com/maps/search/atm/@38.7064731,-8.9760556,14.43z?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D'
             ],
 
             [
@@ -384,19 +378,13 @@ class LinkSeeder extends Seeder
             [
                 'faq_id' => 69,
                 'title' => 'Basic Portuguese Phrases',
-                'url' => 'https://www.practiceportuguese.com/learning-notes/basic-portuguese-phrases/'
+                'url' => 'https://www.practiceportuguese.com/learning-notes-index/'
             ],
 
             [
                 'faq_id' => 71,
                 'title' => 'Google Maps',
                 'url' => 'https://www.google.com/maps'
-            ],
-
-            [
-                'faq_id' => 72,
-                'title' => 'How to Document Home Damage',
-                'url' => 'https://www.wikihow.com/Document-Property-Damage'
             ]
         ]);
     }
