@@ -1080,7 +1080,6 @@ class SynonymSeeder extends Seeder
                     'artifact',
                     'collection',
                     'curator',
-                    'oceanarium',
                     'maat',
                     'gulbenkian',
                     'azulejo',

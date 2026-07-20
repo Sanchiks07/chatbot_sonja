@@ -907,24 +907,76 @@ section {
 
 }
 
+/* ─────────────────────────────────────────────────────────
+   RESPONSIVE — tablet  (≤ 768px)
+   ───────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
+
+    /* Hero */
     .hero {
-        min-height: 60vh;
-        padding-top: 48px;
+        min-height: auto;
+        padding: 52px 20px 44px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .brand-logo {
+        width: min(130px, 36vw);
+    }
+
+    .hero-brand {
+        margin-bottom: 1.4rem;
     }
 
     .hero-search {
         flex-direction: column;
+        gap: 10px;
     }
 
+    .hero-search-btn {
+        width: 100%;
+        padding: 14px;
+        text-align: center;
+    }
+
+    /* Sections */
     .features, .questions, .useful-today {
-        padding: 42px 16px;
+        padding: 40px 16px;
     }
 
+    .features h2, .questions h2, .useful-today h2 {
+        font-size: 1.35rem;
+        margin-bottom: 1.2rem;
+    }
+
+    /* Cards: 2-column grid on tablet */
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .card {
+        padding: 24px 20px;
+    }
+
+    /* Useful today: 3 columns on tablet */
     .useful-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
     }
 
+    .useful-card {
+        padding: 16px 10px;
+    }
+
+    /* Carousel: hide second row on tablet */
+    .question-row--rtl {
+        display: none;
+    }
+
+    /* Chat */
     .chat-page {
         padding: 62px 12px 12px;
     }
@@ -964,6 +1016,149 @@ section {
 
     .chat-input {
         padding: 12px;
+    }
+
+}
+
+/* ─────────────────────────────────────────────────────────
+   RESPONSIVE — phone  (≤ 480px)
+   ───────────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+
+    /* Hero */
+    .hero {
+        padding: 40px 16px 36px;
+    }
+
+    .brand-logo {
+        width: min(110px, 40vw);
+    }
+
+    .hero-brand {
+        margin-bottom: 1.2rem;
+    }
+
+    .hero-brand img {
+        margin-bottom: 0.75rem;
+    }
+
+    .eyebrow {
+        font-size: 0.68rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(1.6rem, 8vw, 2.2rem);
+    }
+
+    .subtitle {
+        font-size: 0.97rem;
+    }
+
+    .description {
+        font-size: 0.93rem;
+        margin-bottom: 1.4rem;
+    }
+
+    /* Cards: single column on small phones */
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .card {
+        padding: 20px 18px;
+        /* Disable hover animation on touch */
+    }
+
+    /* Useful today: 2 columns on phone */
+    .useful-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 9px;
+    }
+
+    .useful-card {
+        padding: 14px 8px;
+        gap: 8px;
+    }
+
+    .useful-icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .useful-label {
+        font-size: 0.78rem;
+    }
+
+    /* Sections */
+    .features, .questions, .useful-today {
+        padding: 32px 14px;
+    }
+
+    .features h2, .questions h2, .useful-today h2 {
+        font-size: 1.2rem;
+    }
+
+    .section-eyebrow {
+        font-size: 0.68rem;
+    }
+
+    /* Carousel chips */
+    .question-chip {
+        font-size: 0.85rem;
+        padding: 9px 14px;
+    }
+
+    /* Chat */
+    .sleeping-sonja {
+        display: none;
+    }
+
+    .chat-page {
+        padding: 12px 10px;
+        align-items: flex-start;
+    }
+
+    .chat-shell {
+        padding-top: 0;
+    }
+
+    .chat-container {
+        height: 100svh;
+        border-radius: 0;
+    }
+
+    .chat-header {
+        padding: 12px 14px;
+    }
+
+    .chat-messages {
+        padding: 16px 14px;
+    }
+
+    .bubble {
+        max-width: 92%;
+        font-size: 0.93rem;
+    }
+
+    .chat-input {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .chat-input input {
+        font-size: 0.93rem;
+        padding: 11px 12px;
+    }
+
+    .chat-input button {
+        padding: 11px 16px;
+        font-size: 0.9rem;
+    }
+
+    .back-btn {
+        padding: 7px 12px;
+        font-size: 0.85rem;
     }
 
 }
