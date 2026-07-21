@@ -1,10 +1,13 @@
 const CACHE_NAME = "epd-v1";
 
 const urlsToCache = [
+    "/",
     "/offline.html",
     "/style.css",
     "/script.js",
     "/img/epd-logo-2.png",
+    "/img/Sonja-192.jpg",
+    "/img/Sonja-512.jpg",
     "/manifest.json"
 ];
 
