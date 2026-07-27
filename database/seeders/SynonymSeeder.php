@@ -1761,6 +1761,8 @@ class SynonymSeeder extends Seeder
                 'words' => json_encode([
                     'shopping centre',
                     'shopping center',
+                    'shopping centres',
+                    'shopping centers',
                     'mall',
                     'malls',
                     'centre',
@@ -1778,7 +1780,8 @@ class SynonymSeeder extends Seeder
                     'escalator',
                     'parking',
                     'cinema',
-                    'hypermarket'
+                    'hypermarket',
+                    'forum montijo'
                 ])
             ],
 

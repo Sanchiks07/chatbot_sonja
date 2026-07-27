@@ -358,6 +358,12 @@ class LinkSeeder extends Seeder
             ],
 
             [
+                'faq_id' => 66,
+                'title' => 'Forum Montijo',
+                'url' => 'https://forummontijo.pt/'
+            ],
+
+            [
                 'faq_id' => 67,
                 'title' => 'Google Maps ATMs Near Montijo',
                 'url' => 'https://www.google.com/maps/search/atm/@38.7064731,-8.9760556,14.43z?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D'

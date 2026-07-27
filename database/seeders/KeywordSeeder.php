@@ -2484,6 +2484,7 @@ class KeywordSeeder extends Seeder
                     'where is colombo shopping centre',
                     'where is vasco da gama shopping centre',
                     'where is alegro montijo',
+                    'where is forum montijo',
                     'mall with clothing stores',
                     'shopping centre opening hours',
                     'shopping centre with food court',

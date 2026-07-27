@@ -1038,7 +1038,7 @@ class FaqSeeder extends Seeder
                 • Indoor shopping during bad weather.
                 • Access to public transport and longer opening hours.
 
-                Popular options include Colombo, Vasco da Gama and Alegro Montijo.
+                Popular options include Colombo, Vasco da Gama, Alegro Montijo and Forum Monitjo.
                 TEXT,
                 'priority' => 6,
             ],
