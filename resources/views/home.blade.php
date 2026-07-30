@@ -11,7 +11,7 @@
             <p class="subtitle">Your Erasmus guide for life in Portugal.</p>
             <p class="description">Need help with accommodation, transport, healthcare or everyday questions? Just ask.</p>
 
-            <form class="hero-search" action="{{ route('chat') }}" method="GET">
+            <form class="hero-search" action="/chat" method="GET">
                 <input
                     type="text" name="q" class="hero-search-input"
                     placeholder="Ask about buses, housing, supermarkets…"
@@ -158,27 +158,27 @@
         <p class="section-eyebrow">Useful today</p>
         <h2>Get quick answers</h2>
         <div class="useful-grid">
-            <a href="{{ route('chat') }}?q=How+do+I+get+a+transport+card" class="useful-card">
+            <a href="/chat/?q=How+do+I+get+a+transport+card" class="useful-card">
                 <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1l0 -4"/><path d="M16 17a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M10 5h7c2.761 0 5 3.134 5 7v5h-2"/><path d="M16 17h-8"/><path d="M16 5l1.5 7h4.5"/><path d="M9.5 10h7.5"/><path d="M12 5v5"/><path d="M5 9v11"/></svg></span>
                 <span class="useful-label">Get a transport card</span>
             </a>
-            <a href="{{ route('chat') }}?q=What+are+the+emergency+numbers+in+Portugal" class="useful-card">
+            <a href="/chat/?q=What+are+the+emergency+numbers+in+Portugal" class="useful-card">
                 <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/><path d="M15 6h6m-3 -3v6"/></svg></span>
                 <span class="useful-label">Emergency numbers</span>
             </a>
-            <a href="{{ route('chat') }}?q=Where+can+I+find+supermarkets+nearby" class="useful-card">
+            <a href="/chat/?q=Where+can+I+find+supermarkets+nearby" class="useful-card">
                 <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M17 17h-11v-14h-2"/><path d="M6 5l14 1l-1 7h-13"/></svg></span>
                 <span class="useful-label">Find supermarkets</span>
             </a>
-            <a href="{{ route('chat') }}?q=Where+is+the+orientation+meeting+point" class="useful-card">
+            <a href="/chat/?q=Where+is+the+orientation+meeting+point" class="useful-card">
                 <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0"/></svg></span>
                 <span class="useful-label">Orientation meeting point</span>
             </a>
-            <a href="{{ route('chat') }}?q=Where+is+the+nearest+pharmacy" class="useful-card">
+            <a href="/chat/?q=Where+is+the+nearest+pharmacy" class="useful-card">
                 <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20.207 3.793a5.95 5.95 0 0 1 0 8.414l-8 8a5.95 5.95 0 0 1 -8.414 -8.414l8 -8a5.95 5.95 0 0 1 8.414 0m-7 1.414l-4.294 4.293l5.586 5.586l4.294 -4.292a3.95 3.95 0 1 0 -5.586 -5.586"/></svg></span>
                 <span class="useful-label">Nearest pharmacy</span>
             </a>
-            <a href="{{ route('chat') }}?q=Where+can+I+withdraw+cash" class="useful-card">
+            <a href="/chat/?q=Where+can+I+withdraw+cash" class="useful-card">
                 <span class="useful-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 6m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z"/><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M7 12l0 0"/><path d="M17 12l0 0"/></svg></span>
                 <span class="useful-label">Withdraw cash</span>
             </a>
