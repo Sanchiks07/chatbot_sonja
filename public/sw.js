@@ -1,4 +1,4 @@
-const CACHE_NAME = "epd-v1";
+const CACHE_NAME = "epd-v2";
 
 const urlsToCache = [
     "/",

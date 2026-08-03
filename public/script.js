@@ -180,6 +180,115 @@ function scrollToBottom() {
 }
 
 
+/* ------ APP INSTALL BUTTON ------ */
+const installCta = document.getElementById("installCta");
+const installButton = document.getElementById("installAppBtn");
+const installHelpText = document.getElementById("installHelpText");
+
+let deferredInstallPrompt = null;
+
+function isInstalledAppContext() {
+    const displayModes = [
+        "(display-mode: standalone)",
+        "(display-mode: window-controls-overlay)",
+        "(display-mode: minimal-ui)",
+        "(display-mode: fullscreen)"
+    ];
+
+    const isStandaloneDisplay = displayModes.some(mode => window.matchMedia(mode).matches);
+    const launchedFromTwa = document.referrer.startsWith("android-app://");
+
+    return isStandaloneDisplay || launchedFromTwa || window.navigator.standalone === true;
+}
+
+function showInstallCta() {
+    if (!installCta || !installButton) {
+        return;
+    }
+
+    if (isInstalledAppContext()) {
+        hideInstallCta();
+        return;
+    }
+
+    installCta.hidden = false;
+    installButton.hidden = false;
+}
+
+function hideInstallCta() {
+    if (!installCta) {
+        return;
+    }
+
+    installCta.hidden = true;
+}
+
+function showInstallHelp(message) {
+    if (!installHelpText) {
+        return;
+    }
+
+    installHelpText.textContent = message;
+    installHelpText.hidden = false;
+}
+
+if (installButton) {
+    installButton.addEventListener("click", async () => {
+        if (deferredInstallPrompt) {
+            deferredInstallPrompt.prompt();
+
+            const choiceResult = await deferredInstallPrompt.userChoice;
+            deferredInstallPrompt = null;
+
+            if (choiceResult.outcome === "accepted") {
+                installButton.hidden = true;
+                showInstallHelp("App installation started. You can open Sonja from your apps list once it finishes.");
+            }
+
+            return;
+        }
+
+        // iOS Safari does not support beforeinstallprompt.
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+            showInstallHelp("On iPhone/iPad: tap Share, then choose Add to Home Screen.");
+            return;
+        }
+
+        showInstallHelp("If your browser supports app install, use the install option in the address bar or browser menu.");
+    });
+}
+
+window.addEventListener("beforeinstallprompt", event => {
+    if (isInstalledAppContext()) {
+        hideInstallCta();
+        return;
+    }
+
+    event.preventDefault();
+    deferredInstallPrompt = event;
+    showInstallCta();
+});
+
+window.addEventListener("appinstalled", () => {
+    deferredInstallPrompt = null;
+    hideInstallCta();
+});
+
+if (isInstalledAppContext()) {
+    hideInstallCta();
+}
+
+window.addEventListener("pageshow", () => {
+    if (isInstalledAppContext()) {
+        hideInstallCta();
+    }
+});
+
+if (installCta && /iPad|iPhone|iPod/.test(navigator.userAgent) && !isInstalledAppContext()) {
+    showInstallCta();
+}
+
+
 /* ------ SERVICE WORKER UPLOAD ------ */
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
