@@ -199,13 +199,13 @@ class LinkSeeder extends Seeder
             
             // ------ MEETING PLACES ------
             [
-                'faq_id' => 36,
+                'faq_id' => 37,
                 'title' => 'Court House / Tribunal',
                 'url' => 'https://maps.app.goo.gl/rN3LuP4mPUZbS6v7A'
             ],
 
             [
-                'faq_id' => 36,
+                'faq_id' => 37,
                 'title' => 'Church',
                 'url' => 'https://maps.app.goo.gl/s7NKprYaU3dBK3kW8'
             ],
