@@ -124,7 +124,6 @@ class FaqSeeder extends Seeder
                 • Report any existing damage as soon as possible to avoid being held responsible later.
                 • Follow all check-in instructions before settling in.
 
-                Door Code: 5812
                 TEXT,
                 'priority' => 7,
             ],
@@ -537,7 +536,7 @@ class FaqSeeder extends Seeder
                 'category_id' => 5,
                 'title' => 'Feeling Sick During Your Internship',
                 'answer' => <<<TEXT
-                If you become ill during your internship, you should not go to work if your condition prevents you from working safely.
+                If you become ill during your internship, you should contact your Erasmus coordinator and not go to work if your condition prevents you from working safely.
 
                 As soon as possible:
                 • Visit a doctor or a healthcare centre for a medical examination.
@@ -546,7 +545,7 @@ class FaqSeeder extends Seeder
                 • Send your medical certificate to your supervisor if they request it.
 
                 If your illness lasts for several days or affects your internship, you should also inform your Erasmus coordinator so they are aware of your situation and can provide support if needed.
-
+                
                 Always communicate with your supervisor as early as possible. Keeping your workplace informed helps avoid misunderstandings and ensures your absence is properly documented.
                 TEXT,
                 'priority' => 9,
@@ -957,6 +956,7 @@ class FaqSeeder extends Seeder
                 • Warn others nearby.
                 • Call 112.
                 • Never use lifts during a fire evacuation.
+                • Contact your Erasmus coordinator about the situation.
 
                 Only return to the building once emergency services confirm it is safe.
                 TEXT,
