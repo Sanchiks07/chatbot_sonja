@@ -19,6 +19,13 @@
                 >
                 <button type="submit" class="hero-search-btn">Ask Sonja</button>
             </form>
+
+            <div class="install-cta" id="installCta" hidden>
+                <button type="button" class="install-app-btn" id="installAppBtn" aria-describedby="installHelpText">
+                    Download App
+                </button>
+                <p class="install-help" id="installHelpText" hidden></p>
+            </div>
         </div>
     </section>
 
